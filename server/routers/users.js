@@ -1,6 +1,5 @@
 const { decodeBase64 } = require('bcryptjs');
 const authenticate = require('../authentication/authenticate');
-
 const router = express.Router();
 
 router.get('/login', (req, res) => {
@@ -12,14 +11,11 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/home', authenticate, (req, res) => {
-  //   console.log(req.session.user_name);
-  console.log(req.session.user_id);
-
-  res.render('homefeed');
-  //   res.render('homefeed', { user_name: req.session.user_name });
+  // can use similar for reviews and movie details
+  res.render('homefeed', { user_id: req.session.user_id });
 });
 
-router.get('/:userid', (req, res) => {
+router.get('/:userid', authenticate, (req, res) => {
   const user_id = req.params.userid;
 
   db.one(
@@ -34,14 +30,12 @@ router.get('/:userid', (req, res) => {
     });
 });
 
-// Passes |
 router.post('/signout', (req, res) => {
   req.session.destroy(() => {
     res.redirect('/');
   });
 });
 
-// Passes |
 router.post('/login', (req, res) => {
   const user_name = req.body.user_name;
   const user_password = req.body.user_password;
@@ -77,7 +71,6 @@ router.post('/login', (req, res) => {
     });
 });
 
-// passes | Able to assign req.session with user_id
 router.post('/signup', (req, res) => {
   const first_name = req.body.first_name;
   const last_name = req.body.last_name;
