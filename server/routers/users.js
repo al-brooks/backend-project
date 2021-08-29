@@ -11,15 +11,19 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/home', (req, res) => {
+router.get('/home', authenticate, (req, res) => {
+  //   console.log(req.session.user_name);
+  console.log(req.session.user_id);
+
   res.render('homefeed');
+  //   res.render('homefeed', { user_name: req.session.user_name });
 });
 
-router.get('/:userid', authenticate, (req, res) => {
+router.get('/:userid', (req, res) => {
   const user_id = req.params.userid;
 
   db.one(
-    'SELECT user_id, first_name, last_name, user_name, user_email FROM blog_users WHERE user_id = $1',
+    'SELECT user_id, first_name, last_name, user_name, user_email FROM users WHERE user_id = $1',
     [user_id]
   )
     .then((user) => {
@@ -30,7 +34,7 @@ router.get('/:userid', authenticate, (req, res) => {
     });
 });
 
-// in-progress: |
+// Passes |
 router.post('/signout', (req, res) => {
   req.session.destroy(() => {
     res.redirect('/');
@@ -54,6 +58,7 @@ router.post('/login', (req, res) => {
           if (result) {
             if (req.session) {
               req.session.user_id = user.user_id;
+              console.log(req.session.user_id);
             }
             res.redirect('/users/home');
           } else {
@@ -72,7 +77,7 @@ router.post('/login', (req, res) => {
     });
 });
 
-// Passes |
+// passes | Able to assign req.session with user_id
 router.post('/signup', (req, res) => {
   const first_name = req.body.first_name;
   const last_name = req.body.last_name;
@@ -117,7 +122,13 @@ router.post('/signup', (req, res) => {
                 [first_name, last_name, user_email, user_name, hash]
               ).then(() => {
                 console.log('User has been added to Database');
-                res.redirect('/users/home');
+                db.one(
+                  'SELECT user_id, user_name, user_password FROM users WHERE user_name = $1',
+                  [user_name]
+                ).then((user) => {
+                  req.session.user_id = user.user_id;
+                  res.redirect('/users/home');
+                });
               });
             } else {
               res.send('An Error Occurred');

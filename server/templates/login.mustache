@@ -9,6 +9,8 @@
 <body>
     <header>
         <button><a href="../">Home</a></button>
+        <button id="loginBtn"><a href="/users/login">Log in</a></button>
+        <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
         <h1>Log in</h1>
         <span>{{message}}</span>
     </header>
@@ -17,9 +19,10 @@
             <form id="login" method="POST" action="/users/login">
                 <input
                     type="text" name="user_name"
-                    placeholder="Enter Username" />
+                    placeholder="Enter Username" required="required"/>
                 <input
                     type="password" name="user_password"
+                    required="required"
                     placeholder="Enter Password"/>
                 <button>login</button>
         </section>
