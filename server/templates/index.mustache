@@ -4,36 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/output.css" />
     <title>Index</title>
 </head>
 <body>
     <header>
-        <nav>
-            <span>insert app logo</span>
-            <span>{{message}}</span>
-            <input id="search" type="text" name="search" placeholder="search movies"/>
-            <button id="loginBtn"><a href="/users/login">Log in</a></button>
-            <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
+        <nav id=topNav>
+            <div id="logoSearch">
+                <span>insert app logo</span>
+                <input id="search" type="text" name="search" placeholder="search movies"/>
+            </div>
+            <div id="navBtns">
+            <button class="loginBtn"><a href="/users/login">Log in</a></button>
+            <button class="signupBtn"><a href="/users/signup">Sign up</a></button>
+            </div>
         </nav>
     </header>
     <main>
-        <section class="landingAuth">
-            <button id="loginBtn"><a href="/users/login">Log in</a></button>
-            <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
+        <section id="topAuth" class="landingAuth">
+            <h2>Movie Scoop</h2>
+            <p>Join our community. Review, rate, and discuss your favorite movies!</p>
+            <span>{{message}}</span>
+            <button class="loginBtn"><a href="/users/login">Log in</a></button>
+            <button class="signupBtn"><a href="/users/signup">Sign up</a></button>
         </section>
         <section id="landingInfo">
+            <h2>What's Movie Scoop?</h2>
+            <p>This is a movie loving Community! Share your movie interests, takes and opinions!</p>
             <span>Insert site info</span>
         </section>
         <section id="landingHowTo">
+            <h2>How does it work?</h2>
+            <p>Search for your favorite movie. If there isn't a review for it already, write one! Look at top reviews and join the discussion!</p>
             <span>Insert how to use the app</span>
         </section>
-        <section id="landingWrap">
+        <section id="landingEnd">
+            <h2>Do you have more questions?</h2>
+            <p>No worries! Everyone here is super friendly and just wants to talk about their favorite movies!</p>
             <span>Insert any other tidbits</span>
         </section>
-        <section class="landingAuth">
-            <button id="loginBtn"><a href="/users/login">Log in</a></button>
-            <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
+        <section id="bottomAuth">
+            <h2>It's that simple</h2>
+            <p>Some come join us! Sign up today!</p>
+            <button class="loginBtn"><a href="/users/login">Log in</a></button>
+            <button class="signupBtn"><a href="/users/signup">Sign up</a></button>
         </section>
     </main>
+
+    {{! <script src=""></script> }}
 </body>
 </html>

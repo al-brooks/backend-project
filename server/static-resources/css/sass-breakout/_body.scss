@@ -8,3 +8,7 @@ body {
   margin: 0px;
   @include flexBox(column, center, center);
 }
+
+// tablet layout
+@media (min-width: 768px) {
+}

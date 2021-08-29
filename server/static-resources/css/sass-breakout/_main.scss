@@ -1,0 +1,66 @@
+@import './mixins';
+// mobile layout
+main {
+  padding-top: 30px;
+  width: 100%;
+  section {
+    display: none;
+    height: 100vh;
+  }
+  h2 {
+    margin: 0px;
+  }
+  .landingAuth {
+    @include flexBox(column, center, center);
+    #login {
+      @include flexBox(column, center, center);
+    }
+    #signup {
+      @include flexBox(column, center, center);
+    }
+  }
+  #loginSection {
+    background-color: $secondaryColor;
+  }
+  #signupSection {
+    background-color: $thirdColor;
+  }
+  #topAuth {
+    padding-bottom: 30px;
+    background-color: $primaryColor;
+  }
+}
+
+// tablet layout
+@media (min-width: 768px) {
+  main {
+    padding-top: 30px;
+    width: 100%;
+    section {
+      height: 500px;
+    }
+    h2 {
+      margin: 0px;
+    }
+    #topAuth {
+      background-color: $primaryColor;
+    }
+    #landingInfo {
+      background-color: $secondaryColor;
+      @include flexBox(column, center, center);
+    }
+    #landingHowTo {
+      background-color: $thirdColor;
+      @include flexBox(column, center, center);
+    }
+    #landingEnd {
+      background-color: $fourthColor;
+      @include flexBox(column, center, center);
+    }
+    #bottomAuth {
+      background-color: $fifthColor;
+      padding-bottom: 30px;
+      @include flexBox(column, center, center);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+// import mixins
+@import './mixins';
+
+//mobile layout first
+header {
+  margin-top: -30px;
+  @include flexBox(row, center, center);
+  #topNav {
+    @include flexBox(row, space-between, center);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: transparent;
+    #logoSearch {
+      margin-left: 10px;
+      width: 60%;
+      #search {
+        width: 50%;
+      }
+    }
+    #navBtns {
+      margin-right: 10px;
+    }
+  }
+}
+
+// tablet layout
+@media (min-width: 768px) {
+}

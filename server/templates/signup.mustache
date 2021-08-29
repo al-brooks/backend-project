@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/output.css" />
     <title>Login</title>
 </head>
 <body>
     <header>
-        <button><a href="../">Home</a></button>
-        <button id="loginBtn"><a href="/users/login">Log in</a></button>
-        <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
-        <h1>Sign up</h1>
-        <span>{{message}}</span>
+        <nav id=topNav>
+            <button><a href="../">Home</a></button>
+            <button id="loginBtn"><a href="/users/login">Log in</a></button>
+            <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
+        </nav>
     </header>
     <main>
-        <section>
+        <section id="signupSection" class="landingAuth">
+            <h2>Sign up</h2>
+            <span>{{message}}</span>
             <form id="signup" method="POST" action="/users/signup">
                 <input
                     type="text" name="first_name"

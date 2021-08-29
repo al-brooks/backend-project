@@ -32,6 +32,10 @@ app.use(
 
 // set routers
 app.use('/users', usersRouter);
+
+// Set static resources - for css styling and async js requests
+app.use(express.static('static-resources'));
+
 // set mustache for template engine
 app.engine('mustache', mustacheExpress());
 app.set('views', './templates');
