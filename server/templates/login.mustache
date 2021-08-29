@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <button><a href="../">Home</a></button>
+        <h1>Log in</h1>
+    </header>
+    <main>
+        <section>
+            <form id="login" method="POST" action="/users/login">
+                <input
+                    type="text" name="user_name"
+                    placeholder="Enter Username" />
+                <input
+                    type="password" name="user_password"
+                    placeholder="Enter Password"/>
+                <button>login</button>
+        </section>
+    </main>
+</body>
+</html>
