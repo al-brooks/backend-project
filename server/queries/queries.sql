@@ -32,3 +32,6 @@ CREATE TABLE comments (
 -- Added column to users table
 ALTER TABLE users
 ADD COLUMN user_email TEXT UNIQUE
+
+-- Delete all test users from users table
+DELETE FROM users
