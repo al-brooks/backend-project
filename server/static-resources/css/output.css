@@ -85,6 +85,14 @@ main #topAuth {
   main h2 {
     margin: 0px;
   }
+  main #loginSection {
+    background-color: #6d597a;
+    height: 100vh;
+  }
+  main #signupSection {
+    background-color: #b56576;
+    height: 100vh;
+  }
   main #topAuth {
     background-color: #355070;
   }

@@ -42,6 +42,14 @@ main {
     h2 {
       margin: 0px;
     }
+    #loginSection {
+      background-color: $secondaryColor;
+      height: 100vh;
+    }
+    #signupSection {
+      background-color: $thirdColor;
+      height: 100vh;
+    }
     #topAuth {
       background-color: $primaryColor;
     }
