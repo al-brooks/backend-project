@@ -3,6 +3,8 @@ require('dotenv').config();
 // express
 global.express = require('express');
 const app = express();
+// fetch API
+const fetch = require('node-fetch');
 //session
 global.session = require('express-session');
 // mustache
@@ -20,6 +22,7 @@ const PORT = process.env.PORT;
 const usersRouter = require('./routers/users');
 // set express to parse body
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // set session middleware
 app.use(
@@ -43,6 +46,40 @@ app.set('view engine', 'mustache');
 
 app.get('/', (req, res) => {
   res.render('index');
+});
+
+// working on Movie API
+
+function displayMovies(movies) {
+  const movieItems = movies.map((order) => {
+    return `<li>${movie.Title}</li>`;
+  });
+  console.log(movieItems);
+  return movieItems;
+}
+
+async function getAllMovies(url) {
+  try {
+    let response = await fetch(url);
+    let movieData = await response.json();
+    return movieData;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+app.get('/search/movies', (req, res) => {
+  res.render('search');
+});
+
+app.post('/search/movies', async (req, res) => {
+  const searchTerm = req.body.search;
+  const url = `https://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${searchTerm}&page=1&type=%22movie%22`;
+
+  const searchedMovies = await getAllMovies(url);
+  console.log(searchedMovies);
+
+  res.render('search', { movies: searchedMovies.Search });
 });
 
 app.listen(PORT, () => {

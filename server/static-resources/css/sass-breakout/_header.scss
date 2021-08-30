@@ -14,8 +14,12 @@ header {
     #logoSearch {
       margin-left: 10px;
       width: 60%;
-      #search {
-        width: 50%;
+      @include flexBox(row, flex-start, center);
+      form {
+        width: 80%;
+        #search {
+          width: 60%;
+        }
       }
     }
     #navBtns {

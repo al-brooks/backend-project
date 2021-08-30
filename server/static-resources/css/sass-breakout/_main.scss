@@ -4,7 +4,7 @@ main {
   padding-top: 30px;
   width: 100%;
   section {
-    display: none;
+    padding-top: 30px;
     height: 100vh;
   }
   h2 {
@@ -29,6 +29,18 @@ main {
     padding-bottom: 30px;
     background-color: $primaryColor;
   }
+  #landingInfo {
+    display: none;
+  }
+  #landingHowTo {
+    display: none;
+  }
+  #landingEnd {
+    display: none;
+  }
+  #bottomAuth {
+    display: none;
+  }
 }
 
 // tablet layout
@@ -41,6 +53,14 @@ main {
     }
     h2 {
       margin: 0px;
+    }
+    #loginSection {
+      background-color: $secondaryColor;
+      height: 100vh;
+    }
+    #signupSection {
+      background-color: $thirdColor;
+      height: 100vh;
     }
     #topAuth {
       background-color: $primaryColor;

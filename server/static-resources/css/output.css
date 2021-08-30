@@ -26,9 +26,16 @@ header #topNav {
 header #topNav #logoSearch {
   margin-left: 10px;
   width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
-header #topNav #logoSearch #search {
-  width: 50%;
+header #topNav #logoSearch form {
+  width: 80%;
+}
+header #topNav #logoSearch form #search {
+  width: 60%;
 }
 header #topNav #navBtns {
   margin-right: 10px;
@@ -39,7 +46,7 @@ main {
   width: 100%;
 }
 main section {
-  display: none;
+  padding-top: 30px;
   height: 100vh;
 }
 main h2 {
@@ -73,6 +80,18 @@ main #topAuth {
   padding-bottom: 30px;
   background-color: #355070;
 }
+main #landingInfo {
+  display: none;
+}
+main #landingHowTo {
+  display: none;
+}
+main #landingEnd {
+  display: none;
+}
+main #bottomAuth {
+  display: none;
+}
 
 @media (min-width: 768px) {
   main {
@@ -84,6 +103,14 @@ main #topAuth {
   }
   main h2 {
     margin: 0px;
+  }
+  main #loginSection {
+    background-color: #6d597a;
+    height: 100vh;
+  }
+  main #signupSection {
+    background-color: #b56576;
+    height: 100vh;
   }
   main #topAuth {
     background-color: #355070;

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/output.css" />
+    <title>Movie Search</title>
+  </head>
+  <body>
+  {{! This is the search page for NON autherized users }}
+    <header>
+        <nav id=topNav>
+            <div id="logoSearch">
+                <span>insert app logo</span>
+                <input id="search" type="text" name="search" placeholder="search movies"/>
+                <input id='searchTerm' type='hidden' value='{{searchTerm}}'/>
+                <button id="searchBtn">search</button>
+            </div>
+            <div id="navBtns">
+            <button class="loginBtn"><a href="/users/login">Log in</a></button>
+            <button class="signupBtn"><a href="/users/signup">Sign up</a></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <ul id="searchResults">
+                {{#movies}}
+                    {{Title}}
+                {{/movies}}
+            </ul>
+        </section>
+        <section>
+            <button id="prevBtn">Previous Page</button>
+            <span id="pageNum"></span>
+            <button id="nextBtn">Next Page</button>
+        </section>
+    </main>
+    <script src="/js/async.js"></script>
+  </body>
+</html>
