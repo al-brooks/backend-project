@@ -17,14 +17,16 @@
                 <button id="searchBtn">search</button>
             </div>
             <div id="navBtns">
+            {{^isAuthenticated}}
             <button id="loginBtn" class="loginBtn"><a href="/users/login">Log in</a></button>
             <button id="signupBtn" class="signupBtn"><a href="/users/signup">Sign up</a></button>
-            <form id="accountBtn" method="get" action="/users/{{user_id}}">
-                <button>Account</button>
-            </form>
+            {{/isAuthenticated}}
+            {{#isAuthenticated}}
+            <button id="accountBtn"><a href="/users/{{user_id}}">Account</a></button>
             <form id="signoutBtn" method="POST" action="/users/signout">
                 <button>Signout</button>
             </form>
+            {{/isAuthenticated}}
             </div>
         </nav>
     </header>
