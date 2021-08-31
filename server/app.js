@@ -50,14 +50,6 @@ app.get('/', (req, res) => {
 
 // working on Movie API
 
-function displayMovies(movies) {
-  const movieItems = movies.map((order) => {
-    return `<li>${movie.Title}</li>`;
-  });
-  console.log(movieItems);
-  return movieItems;
-}
-
 async function getAllMovies(url) {
   try {
     let response = await fetch(url);
@@ -72,14 +64,24 @@ app.get('/search/movies', (req, res) => {
   res.render('search');
 });
 
+// server-side search - returns object for mustache template
 app.post('/search/movies', async (req, res) => {
   const searchTerm = req.body.search;
   const url = `https://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${searchTerm}&page=1&type=%22movie%22`;
-
   const searchedMovies = await getAllMovies(url);
-  console.log(searchedMovies);
+  res.render('search', {
+    movies: searchedMovies.Search,
+    pageNum: 1,
+    searchTerm: searchTerm
+  });
+});
 
-  res.render('search', { movies: searchedMovies.Search });
+// async search - returns json
+app.get('/search/movies/:searchTerm', async (req, res) => {
+  const searchTerm = req.params.searchTerm;
+  const url = `https://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${searchTerm}&page=1&type=%22movie%22`;
+  const searchedMovies = await getAllMovies(url);
+  res.json(searchedMovies);
 });
 
 app.listen(PORT, () => {

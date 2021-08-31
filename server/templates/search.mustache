@@ -14,7 +14,6 @@
             <div id="logoSearch">
                 <span>insert app logo</span>
                 <input id="search" type="text" name="search" placeholder="search movies"/>
-                <input id='searchTerm' type='hidden' value='{{searchTerm}}'/>
                 <button id="searchBtn">search</button>
             </div>
             <div id="navBtns">
@@ -25,15 +24,20 @@
     </header>
     <main>
         <section>
-            <ul id="searchResults">
+            <span>Searched for: {{searchTerm}}<span>
+            <div id="searchResults">
                 {{#movies}}
-                    {{Title}}
+                <div id="movieDiv">
+                    <h4>{{Title}} - {{Year}}</h4>
+                    <input type="hidden" name="imdbID", value="{{imdbID}}"/>
+                    <img src="{{Poster}}"/>
+                </div>
                 {{/movies}}
-            </ul>
+            </div>
         </section>
         <section>
             <button id="prevBtn">Previous Page</button>
-            <span id="pageNum"></span>
+            <span id="pageNum">{{pageNum}}</span>
             <button id="nextBtn">Next Page</button>
         </section>
     </main>
