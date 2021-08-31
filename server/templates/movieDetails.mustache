@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Scoops!</title>
+</head>
+<body>
+    <p>Hello World</p>
+    <header>
+        <nav>
+            <span id = logoimg img src = "/server/static-resources/images/moviescooplogo.png"></span> 
+            <input
+                type="text" name="search"
+                placeholder="search for movies"/>
+            <form method="get" action="/users/{{user_id}}">
+                <button>Account</button>
+            </form>
+            <form method="POST" action="/users/signout">
+                <button>Signout</button>
+            </form>
+        </nav>
+    </header>
+    <main>
+     {{Title}}
+
+        <section>
+            <span>Write a scoop on your favorite movie!</span>
+            <form method = 'POST' action = '/add-review'>
+                <input type = "text" id = "reviewtextbox" name = "reviewbox" placeholder="Please write your review here">
+                <button id = "moviescoopbtn">Add Movie Scoop Here</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
