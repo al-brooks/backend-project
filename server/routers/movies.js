@@ -1,3 +1,5 @@
+const authenticate = require('../authentication/authenticate');
+
 const router = express.Router();
 // const fetchMovieById = require('../static-resources/js/fetchById');
 
@@ -21,7 +23,11 @@ router.get('/:movie_id', (req, res) => {
       'SELECT user_id, body, date_created FROM reviews WHERE movie_id = $1',
       [movie_id]
     ).then((reviews) => {
-      res.render('moviedetails', { movie: movie, allReviews: reviews });
+      res.render('moviedetails', {
+        movie: movie,
+        allReviews: reviews,
+        user_id: req.session.user_id
+      });
     });
   });
 });

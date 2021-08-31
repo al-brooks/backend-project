@@ -51,7 +51,7 @@ router.post('/login', (req, res) => {
           if (result) {
             if (req.session) {
               req.session.user_id = user.user_id;
-              console.log(req.session.user_id);
+              // console.log(req.session.user_id);
             }
             res.redirect('/users/home');
           } else {

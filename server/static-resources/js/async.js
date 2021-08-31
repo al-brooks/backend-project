@@ -1,6 +1,10 @@
 const searchResults = document.getElementById('searchResults');
 const searchBtn = document.getElementById('searchBtn');
 const search = document.getElementById('search');
+const loginBtn = document.getElementById('loginBtn');
+const signupBtn = document.getElementById('signupBtn');
+const accountBtn = document.getElementById('accountBtn');
+const signoutBtn = document.getElementById('signoutBtn');
 
 async function fetchMovieData(url) {
   try {

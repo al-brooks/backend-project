@@ -12,13 +12,24 @@
     <header>
         <nav id=topNav>
             <div id="logoSearch">
+                <button><a href="../">Home</a></button>
                 <span>insert app logo</span>
                 <input id="search" type="text" name="search" placeholder="search movies"/>
                 <button id="searchBtn">search</button>
             </div>
             <div id="navBtns">
-            <button class="loginBtn"><a href="/users/login">Log in</a></button>
-            <button class="signupBtn"><a href="/users/signup">Sign up</a></button>
+            {{^isAuthenticated}}
+            <button id="loginBtn" class="loginBtn"><a href="/users/login">Log in</a></button>
+            <button id="signupBtn" class="signupBtn"><a href="/users/signup">Sign up</a></button>
+            {{/isAuthenticated}}
+            {{#isAuthenticated}}
+            <form id="accountBtn" method="get" action="/users/{{user_id}}">
+                <button>Account</button>
+            </form>
+            <form id="signoutBtn" method="POST" action="/users/signout">
+                <button>Signout</button>
+            </form>
+            {{/isAuthenticated}}
             </div>
         </nav>
     </header>

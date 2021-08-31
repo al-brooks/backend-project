@@ -9,10 +9,13 @@
 <body>
     <header>
         <nav>
-            <span>insert logo here</span>
-            <input
-                type="text" name="search"
-                placeholder="search for movies"/>
+            <div id="logoSearch">
+                <span>logo</span>
+                <form method="POST" action="/search/movies">
+                    <input id="search" type="text" name="search" placeholder="search movies"/>
+                    <button>search</button>
+                </form>
+            </div>
             <form method="get" action="/users/{{user_id}}">
                 <button>Account</button>
             </form>
