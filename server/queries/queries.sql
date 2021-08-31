@@ -10,6 +10,7 @@ CREATE TABLE users (
 
 CREATE TABLE reviews (
 	review_id SERIAL PRIMARY KEY,
+	movie_id VARCHAR(20),
   	title VARCHAR (200),
   	body TEXT,
   	date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

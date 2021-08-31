@@ -23,15 +23,32 @@
         </nav>
     </header>
     <main>
-     {{Title}}
+     {{movie.Title}}
+     {{movie.Year}}
+     {{movie.Rated}}
+     {{movie.Genre}}
+     {{movie.Director}}
+     <img src={{movie.Poster}} alt="poster"/>
+
 
         <section>
             <span>Write a scoop on your favorite movie!</span>
             <form method = 'POST' action = '/movies/add-review'>
                 <input type = 'hidden' value = {{imdbID}} name = 'movie_id'/>
-                <input type = "text" id = "reviewtextbox" name = "review" placeholder="Please write your review here">
+                <input type = 'hidden' value = {{Title}} name = 'title'/>
+                <input type = "textarea" id = "reviewtextbox" name = "review" placeholder="Please write your review here"/>
                 <button id = "moviescoopbtn">Add Movie Scoop Here</button>
             </form>
+        </section>
+        <section>
+            {{#allReviews}}
+
+                {{user_id}}
+                {{date_created}}
+                {{body}}
+
+            {{/allReviews}}
+             
         </section>
     </main>
 </body>
