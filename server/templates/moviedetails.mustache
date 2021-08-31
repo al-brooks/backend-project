@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Scoops!</title>
+</head>
+<body>
+    <p>Hello World</p>
+    <header>
+        <nav>
+            <span id = logoimg img src = "/server/static-resources/images/moviescooplogo.png"></span> 
+            <input
+                type="text" name="search"
+                placeholder="search for movies"/>
+            <form method="get" action="/users/{{user_id}}">
+                <button>Account</button>
+            </form>
+            <form method="POST" action="/users/signout">
+                <button>Signout</button>
+            </form>
+        </nav>
+    </header>
+    <main>
+     {{movie.Title}}
+     {{movie.Year}}
+     {{movie.Rated}}
+     {{movie.Genre}}
+     {{movie.Director}}
+     <img src={{movie.Poster}} alt="poster"/>
+
+
+        <section>
+            <span>Write a scoop on your favorite movie!</span>
+            <form method = 'POST' action = '/movies/add-review'>
+                <input type = 'hidden' value = {{imdbID}} name = 'movie_id'/>
+                <input type = 'hidden' value = {{Title}} name = 'title'/>
+                <input type = "textarea" id = "reviewtextbox" name = "review" placeholder="Please write your review here"/>
+                <button id = "moviescoopbtn">Add Movie Scoop Here</button>
+            </form>
+        </section>
+        <section>
+            {{#allReviews}}
+
+                {{user_id}}
+                {{date_created}}
+                {{body}}
+
+            {{/allReviews}}
+             
+        </section>
+    </main>
+</body>
+</html>

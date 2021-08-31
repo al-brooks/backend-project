@@ -20,6 +20,7 @@ global.bcrypt = require('bcryptjs');
 const PORT = process.env.PORT;
 // create router variables
 const usersRouter = require('./routers/users');
+const moviesRouter = require('./routers/movies');
 // set express to parse body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -35,7 +36,7 @@ app.use(
 
 // set routers
 app.use('/users', usersRouter);
-
+app.use('/movies', moviesRouter);
 // Set static resources - for css styling and async js requests
 app.use(express.static('static-resources'));
 
@@ -84,6 +85,6 @@ app.get('/search/movies/:searchTerm', async (req, res) => {
   res.json(searchedMovies);
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log('Server is running...');
 });
