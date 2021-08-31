@@ -23,7 +23,6 @@ router.post('/movies', async (req, res) => {
   const searchedMovies = await getAllMovies(url);
   res.render('search', {
     movies: searchedMovies.Search,
-    pageNum: 1,
     searchTerm: searchTerm
   });
 });

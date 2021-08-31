@@ -8,7 +8,6 @@
     <title>Movie Search</title>
   </head>
   <body>
-  {{! This is the search page for NON autherized users }}
     <header>
         <nav id=topNav>
             <div id="logoSearch">
@@ -18,18 +17,14 @@
                 <button id="searchBtn">search</button>
             </div>
             <div id="navBtns">
-            {{^isAuthenticated}}
             <button id="loginBtn" class="loginBtn"><a href="/users/login">Log in</a></button>
             <button id="signupBtn" class="signupBtn"><a href="/users/signup">Sign up</a></button>
-            {{/isAuthenticated}}
-            {{#isAuthenticated}}
             <form id="accountBtn" method="get" action="/users/{{user_id}}">
                 <button>Account</button>
             </form>
             <form id="signoutBtn" method="POST" action="/users/signout">
                 <button>Signout</button>
             </form>
-            {{/isAuthenticated}}
             </div>
         </nav>
     </header>
@@ -47,11 +42,6 @@
                 </div>
                 {{/movies}}
             </div>
-        </section>
-        <section>
-            <button id="prevBtn">Previous Page</button>
-            <span id="pageNum">{{pageNum}}</span>
-            <button id="nextBtn">Next Page</button>
         </section>
     </main>
     <script src="/js/async.js"></script>
