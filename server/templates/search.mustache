@@ -29,7 +29,9 @@
                 {{#movies}}
                 <div id="movieDiv">
                     <h4>{{Title}} - {{Year}}</h4>
-                    <input type="hidden" name="imdbID", value="{{imdbID}}"/>
+                    <form method="GET" action="/movies/{{imdbID}}">
+                        <button>see movie details</button>
+                    </form>
                     <img src="{{Poster}}"/>
                 </div>
                 {{/movies}}

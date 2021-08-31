@@ -1,5 +1,4 @@
 const { decodeBase64 } = require('bcryptjs');
-const authenticate = require('../authentication/authenticate');
 const router = express.Router();
 
 router.get('/login', (req, res) => {

@@ -4,7 +4,7 @@ require('dotenv').config();
 global.express = require('express');
 const app = express();
 // fetch API
-const fetch = require('node-fetch');
+global.fetch = require('node-fetch');
 //session
 global.session = require('express-session');
 // mustache
@@ -21,6 +21,7 @@ const PORT = process.env.PORT;
 // create router variables
 const usersRouter = require('./routers/users');
 const moviesRouter = require('./routers/movies');
+const searchRouter = require('./routers/search');
 // set express to parse body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -37,6 +38,7 @@ app.use(
 // set routers
 app.use('/users', usersRouter);
 app.use('/movies', moviesRouter);
+app.use('/search', searchRouter);
 // Set static resources - for css styling and async js requests
 app.use(express.static('static-resources'));
 
@@ -47,42 +49,6 @@ app.set('view engine', 'mustache');
 
 app.get('/', (req, res) => {
   res.render('index');
-});
-
-// working on Movie API
-
-async function getAllMovies(url) {
-  try {
-    let response = await fetch(url);
-    let movieData = await response.json();
-    return movieData;
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-app.get('/search/movies', (req, res) => {
-  res.render('search');
-});
-
-// server-side search - returns object for mustache template
-app.post('/search/movies', async (req, res) => {
-  const searchTerm = req.body.search;
-  const url = `https://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${searchTerm}&page=1&type=%22movie%22`;
-  const searchedMovies = await getAllMovies(url);
-  res.render('search', {
-    movies: searchedMovies.Search,
-    pageNum: 1,
-    searchTerm: searchTerm
-  });
-});
-
-// async search - returns json
-app.get('/search/movies/:searchTerm', async (req, res) => {
-  const searchTerm = req.params.searchTerm;
-  const url = `https://www.omdbapi.com/?apikey=${process.env.API_KEY}&s=${searchTerm}&page=1&type=%22movie%22`;
-  const searchedMovies = await getAllMovies(url);
-  res.json(searchedMovies);
 });
 
 app.listen(process.env.PORT, () => {
