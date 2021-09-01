@@ -1,6 +1,5 @@
 // import mixins
 @import './mixins';
-
 //mobile layout first
 header {
   margin-top: -50px;
@@ -119,6 +118,56 @@ header {
     #navBtns {
       margin-right: 15px;
       @include flexBox(row, center, center);
+    }
+  }
+
+  // sime update
+  #landingHeader {
+    margin-top: -30px;
+    @include flexBox(row, center, center);
+    #topNav {
+      @include flexBox(row, space-between, center);
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      background-color: black;
+      color: #ffff;
+      height: 80px;
+      display: flexbox;
+      justify-content: flex-start;
+      button {
+        justify-content: flex-start;
+        font: 24px sans-serif;
+        background-color: transparent;
+        border: 0;
+      }
+      #logoSearch {
+        margin-left: 10px;
+        width: 60%;
+        @include flexBox(row, flex-start, center);
+        span {
+          height: 100%;
+          display: table;
+          float: left;
+        }
+        form {
+          width: 80%;
+          #search {
+            width: 30%;
+            padding: 6px;
+            margin-left: 6px;
+            background: none;
+            color: white;
+            top: 50%;
+            left: 50%;
+          }
+        }
+      }
+      #navBtns {
+        margin-right: 10px;
+        font-size: 36px;
+        color: whitesmoke;
+      }
     }
   }
 }
