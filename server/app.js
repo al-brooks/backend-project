@@ -23,6 +23,9 @@ const usersRouter = require('./routers/users');
 const moviesRouter = require('./routers/movies');
 const searchRouter = require('./routers/search');
 const authenticate = require('./authentication/authenticate');
+// Set static resources - for css styling and async js requests
+app.use(express.static('static-resources'));
+
 // set express to parse body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -44,8 +47,6 @@ app.use(
 app.use('/users', usersRouter);
 app.use('/movies', authenticate, moviesRouter);
 app.use('/search', searchRouter);
-// Set static resources - for css styling and async js requests
-app.use(express.static('static-resources'));
 
 // set mustache for template engine
 app.engine('mustache', mustacheExpress());

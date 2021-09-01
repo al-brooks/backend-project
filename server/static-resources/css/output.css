@@ -6,6 +6,10 @@ body {
   align-items: center;
 }
 
+#searchBody {
+  background-color: #e2d6c5;
+}
+
 header {
   margin-top: -30px;
   display: flex;
@@ -42,7 +46,9 @@ header #topNav #navBtns {
 }
 
 #searchHeader {
-  margin-top: -50px;
+  margin-top: 0px;
+  width: 100%;
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -54,7 +60,8 @@ header #topNav #navBtns {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #760a08;
+  height: 100%;
+  background-color: transparent;
 }
 #searchHeader #searchTopNav #logoSearch {
   margin-left: 10px;
@@ -64,11 +71,21 @@ header #topNav #navBtns {
   justify-content: flex-start;
   align-items: center;
 }
-#searchHeader #searchTopNav #logoSearch form {
-  width: 80%;
-}
-#searchHeader #searchTopNav #logoSearch form #search {
+#searchHeader #searchTopNav #logoSearch #search {
+  border: transparent;
+  border-radius: 10px;
   width: 60%;
+}
+#searchHeader #searchTopNav #logoSearch #searchBtn {
+  margin-left: 5px;
+  background: center url("../images/search_icon.png") no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  border: transparent;
+}
+#searchHeader #searchTopNav #logoSearch #searchBtn:hover {
+  cursor: pointer;
 }
 #searchHeader #searchTopNav #navBtns {
   margin-right: 10px;

@@ -8,6 +8,9 @@ body {
   margin: 0px;
   @include flexBox(column, center, center);
 }
+#searchBody {
+  background-color: $primaryColor;
+}
 
 // tablet layout
 @media (min-width: 768px) {
