@@ -17,6 +17,13 @@
                     <button>search</button>
                 </form>
             </div>
+            <div id="guestLogin">
+                <form method="POST" action="/users/login">
+                    <input type="hidden" name="user_name" value="Guest">
+                    <input type="hidden" name="user_password" value="guest123">
+                    <button class='btn'>Login as Guest</button>
+                </form>
+            </div>
         </nav>
     </header>
     <main>
@@ -47,12 +54,6 @@
             <p>Some come join us! Sign up today!</p>
             <button class="loginBtn"><a href="/users/login">Log in</a></button>
             <button class="signupBtn"><a href="/users/signup">Sign up</a></button>
-         <a href="/login"><button class='btn'>Register</button></a>
-        <form method="POST" action="/users/login">
-          <input type="hidden" name="user_name" value="Guest">
-          <input type="hidden" name="user_password" value="guest123">
-          <button class='btn'>Login as Guest</button>
-        </form>
         </section>
 
 

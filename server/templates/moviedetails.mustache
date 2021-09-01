@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/output.css" />
     <title>The Scoops!</title>
 </head>
 <body>
-    <header>
+    <header id="movieHeader">
         <nav>
-            <img src = "/images/moviescooplogo.png"/>
-            <input
-                type="text" name="search"
-                placeholder="search for movies"/>
-            <form method="get" action="/users/{{user_id}}">
-                <button>Account</button>
-            </form>
-            <form method="POST" action="/users/signout">
-                <button>Signout</button>
-            </form>
+            {{! <img src = "/images/moviescooplogo.png"/> }}
+            <div>
+                <span id="logoImg"></span>
+                <input
+                    type="text" name="search"
+                    placeholder="search for movies"/>
+            </div>
+            <div>
+                <form method="get" action="/users/{{user_id}}">
+                    <button>Account</button>
+                </form>
+                <form method="POST" action="/users/signout">
+                    <button>Signout</button>
+                </form>
+            <div>
         </nav>
     </header>
     <main>
@@ -33,8 +39,8 @@
         <section>
             <span>Write a scoop on your favorite movie!</span>
             <form method = 'POST' action = '/movies/add-review'>
-                <input type = 'hidden' value = {{imdbID}} name = 'movie_id'/>
-                <input type = 'hidden' value = {{Title}} name = 'title'/>
+                <input type = 'hidden' value = {{movie.imdbID}} name = 'movie_id'/>
+                <input type = 'hidden' value = {{movie.Title}} name = 'title'/>
                 <input type = "textarea" id = "reviewtextbox" name = "review" placeholder="Please write your review here"/>
                 <button id = "moviescoopbtn">Add Movie Scoop Here</button>
             </form>
