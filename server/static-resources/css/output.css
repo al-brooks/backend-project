@@ -21,14 +21,15 @@ header #topNav {
   position: fixed;
   top: 0px;
   width: 100%;
-  background-color: transparent;
+  background-color: black;
+  color: #ffff;
   height: 80px;
   display: flexbox;
   justify-content: flex-start;
 }
 header #topNav button {
   justify-content: flex-start;
-  font: 28px sans-serif;
+  font: 24px sans-serif;
   background-color: transparent;
   border: 0;
 }
@@ -54,10 +55,13 @@ header #topNav #logoSearch form #search {
   margin-left: 6px;
   background: none;
   color: white;
+  top: 50%;
+  left: 50%;
 }
 header #topNav #navBtns {
   margin-right: 10px;
-  font-size: 44px;
+  font-size: 36px;
+  color: whitesmoke;
 }
 
 main {
@@ -90,8 +94,8 @@ main .landingAuth #signup {
   align-items: center;
 }
 main #loginSection {
-  background-color: #6d597a;
-  background-image: url(/images/login.png);
+  background-image: url(/images/login2.png);
+  background-size: contain;
   padding: 0;
   margin: 0;
   background-size: cover;
@@ -99,49 +103,43 @@ main #loginSection {
 }
 main #loginSection h2 {
   float: right;
-  color: white;
+  color: #0c745d;
   font-size: 40px;
   border-bottom: 6px solid #4caf50;
   margin-bottom: 50px;
   padding: 13px 0;
 }
-main #loginSection #login {
-  background-color: #4e4e0b;
-}
 main #loginSection #login input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: none;
-  display: block;
   margin: 6px auto;
   text-align: center;
-  border: 2px solid #f10f0f;
-  padding: 14px 14px;
   width: 200px;
   outline: none;
-  border-radius: 24px;
+  border-radius: 8px;
   transition: 0.25s;
-  color: #d82369;
   font-size: 18px;
   background-color: #e9f5f5;
 }
 main #loginSection #login button {
-  background: none;
   display: block;
   margin: 6px auto;
   text-align: center;
-  border: 2px solid #f10f0f;
-  padding: 14px 14px;
-  width: 200px;
+  padding: 0;
+  width: 100px;
   outline: none;
-  border-radius: 24px;
+  border-radius: 8px;
   transition: 0.25s;
-  color: #db1717;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 200;
   background-color: #e9f5f5;
 }
 main #signupSection {
   background-color: #b56576;
-  background-image: url(/images/signup.jpeg);
+  background-image: url(/images/signup-2.jpeg);
   padding: 0;
   margin: 0;
   background-size: cover;
@@ -149,9 +147,9 @@ main #signupSection {
 }
 main #signupSection h2 {
   float: right;
-  color: white;
+  color: #8a1111;
   font-size: 40px;
-  border-bottom: 6px solid #4caf50;
+  border-bottom: 6px solid #010701;
   margin-bottom: 50px;
   padding: 13px 0;
 }
@@ -160,47 +158,107 @@ main #signupSection #signup input {
   display: block;
   margin: 6px auto;
   text-align: center;
-  border: 2px solid #f10f0f;
-  padding: 14px 14px;
+  padding: 14px 10px;
   width: 200px;
   outline: none;
-  border-radius: 24px;
+  border-radius: 8px;
   transition: 0.25s;
-  color: blue;
+  color: #03031d;
   font-size: 18px;
-  background-color: #d0da4c;
+  background-color: #fcfcfa;
 }
 main #signupSection #signup button {
   background: none;
   display: block;
   margin: 6px auto;
   text-align: center;
-  border: 2px solid #f10f0f;
-  padding: 14px 14px;
+  padding: 0;
   width: 200px;
   outline: none;
-  border-radius: 24px;
+  border-radius: 6px;
   transition: 0.25s;
   color: #071522;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 200;
   background-color: #e9f5f5;
 }
 main #topAuth {
   padding-bottom: 30px;
   background-color: #355070;
+  background-image: url(/images/index06.jpeg);
+  background-size: contain;
+}
+main #topAuth h2 {
+  color: whitesmoke;
+  font-size: 44px;
+}
+main #topAuth p {
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: 100;
 }
 main #landingInfo {
   display: none;
+  padding-bottom: 30px;
+  background-color: #355070;
+  background-image: url(/images/index01.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main #landingInfo h2 {
+  color: black;
+  font-size: 44px;
+}
+main #landingInfo p {
+  color: #5013f7;
+  font-size: 24px;
+  font-weight: 100;
 }
 main #landingHowTo {
   display: none;
+  background-image: url(/images/index02.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main #landingHowTo h2 {
+  color: aliceblue;
+  font-size: 44px;
+}
+main #landingHowTo p {
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: 100;
 }
 main #landingEnd {
-  display: none;
+  background-image: url(/images/index4.jpng);
+  background-size: contain;
+  background-position: center;
+}
+main #landingEnd h2 {
+  color: #f9f9fd;
+  font-size: 44px;
+}
+main #landingEnd p {
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: 100;
 }
 main #bottomAuth {
-  display: none;
+  background-image: url(/images/index01.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main #bottomAuth h2 {
+  color: aliceblue;
+  font-size: 44px;
+}
+main #bottomAuth p {
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: 100;
 }
 
 @media (min-width: 768px) {

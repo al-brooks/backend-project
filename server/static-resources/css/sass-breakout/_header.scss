@@ -9,13 +9,14 @@ header {
         position: fixed;
         top: 0px;
         width: 100%;
-        background-color: transparent;
+        background-color: black;
+        color: #ffff;
         height: 80px;
         display: flexbox;
         justify-content: flex-start;
         button {
             justify-content: flex-start;
-            font: 28px sans-serif;
+            font: 24px sans-serif;
             background-color: transparent;
             border: 0;
         }
@@ -36,12 +37,15 @@ header {
                     margin-left: 6px;
                     background: none;
                     color: white;
+                    top: 50%;
+                    left: 50%;
                 }
             }
         }
         #navBtns {
             margin-right: 10px;
-            font-size: 44px;
+            font-size: 36px;
+            color: whitesmoke;
         }
     }
 }

@@ -1,5 +1,5 @@
     @import './mixins';
-    // mobile layout
+    @import './variables';
     main {
         padding-top: 30px;
         width: 100%;
@@ -20,50 +20,43 @@
             }
         }
         #loginSection {
-            background-color: $secondaryColor;
-            background-image: url(/images/login.png);
+            background-image: url(/images/login2.png);
+            background-size: contain;
             padding: 0;
             margin: 0;
             background-size: cover;
             font-family: sans-serif;
             h2 {
                 float: right;
-                color: white;
+                color: rgb(12, 116, 93);
                 font-size: 40px;
                 border-bottom: 6px solid #4caf50;
                 margin-bottom: 50px;
                 padding: 13px 0;
             }
             #login {
-                background-color: rgb(78, 78, 11);
                 input {
+                    @include flexBox(column, center, center);
                     background: none;
-                    display: block;
                     margin: 6px auto;
                     text-align: center;
-                    border: 2px solid #f10f0f;
-                    padding: 14px 14px;
                     width: 200px;
                     outline: none;
-                    border-radius: 24px;
+                    border-radius: 8px;
                     transition: 0.25s;
-                    color: rgb(216, 35, 105);
                     font-size: 18px;
                     background-color: rgb(233, 245, 245);
                 }
                 button {
-                    background: none;
                     display: block;
                     margin: 6px auto;
                     text-align: center;
-                    border: 2px solid #f10f0f;
-                    padding: 14px 14px;
-                    width: 200px;
+                    padding: 0;
+                    width: 100px;
                     outline: none;
-                    border-radius: 24px;
+                    border-radius: 8px;
                     transition: 0.25s;
-                    color: rgb(219, 23, 23);
-                    font-size: 24px;
+                    font-size: 18px;
                     font-weight: 200;
                     background-color: rgb(233, 245, 245);
                 }
@@ -71,16 +64,16 @@
         }
         #signupSection {
             background-color: $thirdColor;
-            background-image: url(/images/signup.jpeg);
+            background-image: url(/images/signup-2.jpeg);
             padding: 0;
             margin: 0;
             background-size: cover;
             font-family: sans-serif;
             h2 {
                 float: right;
-                color: white;
+                color: rgb(138, 17, 17);
                 font-size: 40px;
-                border-bottom: 6px solid #4caf50;
+                border-bottom: 6px solid #010701;
                 margin-bottom: 50px;
                 padding: 13px 0;
             }
@@ -90,29 +83,27 @@
                     display: block;
                     margin: 6px auto;
                     text-align: center;
-                    border: 2px solid #f10f0f;
-                    padding: 14px 14px;
+                    padding: 14px 10px;
                     width: 200px;
                     outline: none;
-                    border-radius: 24px;
+                    border-radius: 8px;
                     transition: 0.25s;
-                    color: blue;
+                    color: rgb(3, 3, 29);
                     font-size: 18px;
-                    background-color: rgb(208, 218, 76);
+                    background-color: rgb(252, 252, 250);
                 }
                 button {
                     background: none;
                     display: block;
                     margin: 6px auto;
                     text-align: center;
-                    border: 2px solid #f10f0f;
-                    padding: 14px 14px;
+                    padding: 0;
                     width: 200px;
                     outline: none;
-                    border-radius: 24px;
+                    border-radius: 6px;
                     transition: 0.25s;
                     color: rgb(7, 21, 34);
-                    font-size: 24px;
+                    font-size: 18px;
                     font-weight: 200;
                     background-color: rgb(233, 245, 245);
                 }
@@ -121,18 +112,80 @@
         #topAuth {
             padding-bottom: 30px;
             background-color: $primaryColor;
+            background-image: url(/images/index06.jpeg);
+            background-size: contain;
+            h2 {
+                color: whitesmoke;
+                font-size: 44px;
+            }
+            p {
+                color: aliceblue;
+                font-size: 24px;
+                font-weight: 100;
+            }
         }
         #landingInfo {
             display: none;
+            padding-bottom: 30px;
+            background-color: $primaryColor;
+            background-image: url(/images/index01.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            h2 {
+                color: black;
+                font-size: 44px;
+            }
+            p {
+                color: rgb(80, 19, 247);
+                font-size: 24px;
+                font-weight: 100;
+            }
         }
         #landingHowTo {
             display: none;
+            background-image: url(/images/index02.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            h2 {
+                color: aliceblue;
+                font-size: 44px;
+            }
+            p {
+                color: aliceblue;
+                font-size: 24px;
+                font-weight: 100;
+            }
         }
         #landingEnd {
-            display: none;
+            background-image: url(/images/index4.jpng);
+            background-size: contain;
+            background-position: center;
+            h2 {
+                color: rgb(249, 249, 253);
+                font-size: 44px;
+            }
+            p {
+                color: aliceblue;
+                font-size: 24px;
+                font-weight: 100;
+            }
         }
         #bottomAuth {
-            display: none;
+            background-image: url(/images/index01.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            h2 {
+                color: aliceblue;
+                font-size: 44px;
+            }
+            p {
+                color: aliceblue;
+                font-size: 24px;
+                font-weight: 100;
+            }
         }
     }
     
