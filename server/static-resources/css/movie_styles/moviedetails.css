@@ -1,0 +1,111 @@
+body {
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  margin-top: -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #topNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: transparent;
+}
+
+header #topNav #logoSearch {
+  margin-left: 10px;
+  width: 60%;
+}
+
+header #topNav #logoSearch #search {
+  width: 50%;
+}
+
+header #topNav #navBtns {
+  margin-right: 10px;
+}
+
+header {
+  margin-top: 50px;
+  padding: 10px;
+}
+
+header button {
+  border-radius: 8px;
+  background-color: #6e0a00;
+  color: #E2D6C5;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+header button:hover {
+  background: C47318;
+  color: black;
+}
+
+body {
+  background-image: url("https://source.unsplash.com/5tlxS_jlVGY");
+  background-size: cover;
+}
+
+#logoimg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: gray;
+}
+/*# sourceMappingURL=moviedetails.css.map */

@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/movie_styles/moviedetails.css" />
     <title>The Scoops!</title>
 </head>
-<body>
-    <p>Hello World</p>
-    <header>
-        <nav>
-            <span id = logoimg img src = "/server/static-resources/images/moviescooplogo.png"></span> 
+
+
+    <nav>
+         <img id = "logoimg" src = "/images/moviescooplogo.png"/>
+    
+    
+            
             <input
                 type="text" name="search"
                 placeholder="search for movies"/>
+                <button>search</button>
+            </nav>
             <form method="get" action="/users/{{user_id}}">
                 <button>Account</button>
             </form>
@@ -21,7 +26,7 @@
                 <button>Signout</button>
             </form>
         </nav>
-    </header>
+    
     <main>
      {{movie.Title}}
      {{movie.Year}}
