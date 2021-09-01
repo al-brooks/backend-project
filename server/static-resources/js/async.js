@@ -12,11 +12,11 @@ async function fetchMovieData(url) {
     let movieData = await response.json();
     let movieItems = movieData.Search.map((movie) => {
       return `<div id="movieDiv">
-                <h4>${movie.Title} - ${movie.Year}</h4>
+                <h4>${movie.Title}</h4>
+                <img src="${movie.Poster}"/>
                 <form method="GET" action="/movies/${movie.imdbID}">
                         <button>see movie details</button>
                     </form>
-                <img src="${movie.Poster}"/>
             </div>`;
     });
     searchResults.innerHTML = movieItems.join('');

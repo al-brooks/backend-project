@@ -7,9 +7,16 @@
 body {
   margin: 0px;
   @include flexBox(column, center, center);
+  a {
+    text-decoration: none;
+  }
 }
 #searchBody {
   background-color: $primaryColor;
+  @include flexBox(column, center, center);
+  a {
+    text-decoration: none;
+  }
 }
 
 // tablet layout

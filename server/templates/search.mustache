@@ -34,17 +34,16 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main id="searchMain">
         <section>
-            <span>Searched for: {{searchTerm}}<span>
             <div id="searchResults">
                 {{#movies}}
                 <div id="movieDiv">
-                    <h4>{{Title}} - {{Year}}</h4>
+                    <h4>{{Title}}</h4>
+                    <img src="{{Poster}}"/>
                     <form method="GET" action="/movies/{{imdbID}}">
                         <button>see movie details</button>
                     </form>
-                    <img src="{{Poster}}"/>
                 </div>
                 {{/movies}}
             </div>

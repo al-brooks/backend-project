@@ -19,9 +19,6 @@ main {
       @include flexBox(column, center, center);
     }
   }
-  .movieReviews {
-    @include flexBox(column, center, center);
-  }
   #loginSection {
     background-color: $secondaryColor;
   }
@@ -43,6 +40,35 @@ main {
   }
   #bottomAuth {
     display: none;
+  }
+  .movieReviews {
+    @include flexBox(column, center, center);
+  }
+}
+
+// search + homefeed + useraccount mains
+#searchMain {
+  height: 500px;
+  section {
+    #searchResults {
+      padding-top: 0px;
+      @include flexBox(row, space-evenly, center);
+      flex-wrap: wrap;
+      #movieDiv {
+        text-align: center;
+        @include flexBox(column, center, center);
+        border: 2px solid $thirdColor;
+        border-radius: 10px;
+        padding-bottom: 20px;
+        margin: 10px 0px;
+        width: 300px;
+        height: 400px;
+        img {
+          width: 200px;
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }
 
