@@ -19,6 +19,9 @@ main {
       @include flexBox(column, center, center);
     }
   }
+  .movieReviews {
+    @include flexBox(column, center, center);
+  }
   #loginSection {
     background-color: $secondaryColor;
   }

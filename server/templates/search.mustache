@@ -11,8 +11,12 @@
     <header id="searchHeader">
         <nav id=searchTopNav>
             <div id="logoSearch">
-                <button><a href="../">Home</a></button>
-                <span>insert app logo</span>
+                {{^isAuthenticated}}
+                <a href="../" id="logoImg"></a>
+                {{/isAuthenticated}}
+                {{#isAuthenticated}}
+                <a href="/users/home" id="logoImg"></a>
+                {{/isAuthenticated}}
                 <input id="search" type="text" name="search" placeholder="search movies"/>
                 <button id="searchBtn"></button>
             </div>

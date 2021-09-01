@@ -20,7 +20,7 @@ router.get('/:movie_id', (req, res) => {
   const movie_id = req.params.movie_id;
   fetchMovieById(movie_id, function (movie) {
     db.any(
-      'SELECT user_id, body, date_created FROM reviews WHERE movie_id = $1',
+      'SELECT user_id, body, title,date_created FROM reviews WHERE movie_id = $1',
       [movie_id]
     ).then((reviews) => {
       res.render('moviedetails', {

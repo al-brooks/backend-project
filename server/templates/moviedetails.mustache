@@ -10,12 +10,12 @@
 <body>
     <header id="movieHeader">
         <nav>
-            {{! <img src = "/images/moviescooplogo.png"/> }}
             <div>
                 <span id="logoImg"></span>
-                <input
-                    type="text" name="search"
-                    placeholder="search for movies"/>
+                <form method="POST" action="/search/movies">
+                    <input id="search" type="text" name="search" placeholder="search movies"/>
+                    <button>search</button>
+                </form>
             </div>
             <div>
                 <form method="get" action="/users/{{user_id}}">
@@ -28,32 +28,32 @@
         </nav>
     </header>
     <main>
-     {{movie.Title}}
-     {{movie.Year}}
-     {{movie.Rated}}
-     {{movie.Genre}}
-     {{movie.Director}}
-     <img src={{movie.Poster}} alt="poster"/>
-
-
-        <section>
+        <section id="movieInfo">
+            {{movie.Title}}
+            {{movie.Year}}
+            {{movie.Rated}}
+            {{movie.Genre}}
+            {{movie.Director}}
+            <img src={{movie.Poster}} alt="poster"/>
+        </section>
+        <section id='addReviews'>
             <span>Write a scoop on your favorite movie!</span>
             <form method = 'POST' action = '/movies/add-review'>
                 <input type = 'hidden' value = {{movie.imdbID}} name = 'movie_id'/>
-                <input type = 'hidden' value = {{movie.Title}} name = 'title'/>
-                <input type = "textarea" id = "reviewtextbox" name = "review" placeholder="Please write your review here"/>
-                <button id = "moviescoopbtn">Add Movie Scoop Here</button>
+                <input type='text' id='reviewTitle' name='title' placeholder='Enter Title'/>
+                <input type = "textarea" id = "reviewBody" name = "review" placeholder="Please write your review here"/>
+                <button id = "moviescoopbtn">Submit</button>
             </form>
         </section>
-        <section>
+        <section id='postReviews'>
             {{#allReviews}}
-
-                {{user_id}}
-                {{date_created}}
-                {{body}}
-
-            {{/allReviews}}
-             
+                <div class="movieReview">
+                    <h4>{{title}}</h4>
+                    <p>{{body}}</p>
+                    <span>{{user_id}}</span>
+                    <span>{{date_created}}</span>
+                </div>
+            {{/allReviews}}  
         </section>
     </main>
 </body>

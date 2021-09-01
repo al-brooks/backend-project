@@ -35,6 +35,7 @@ header {
   @include flexBox(row, center, center);
   #searchTopNav {
     @include flexBox(row, space-between, center);
+    margin-top: 20px;
     width: 100%;
     height: 100%;
     background-color: transparent;
@@ -42,6 +43,15 @@ header {
       margin-left: 10px;
       width: 60%;
       @include flexBox(row, flex-start, center);
+      #logoImg {
+        margin-left: 5px;
+        background: center url('../images/moviescooplogo.png') no-repeat;
+        background-size: contain;
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+      }
       #search {
         border: transparent;
         border-radius: 10px;
@@ -57,66 +67,30 @@ header {
         &:hover {
           cursor: pointer;
         }
-        // border-radius: 0px;
+      }
+      form {
+        width: 100%;
+        #search {
+          border: transparent;
+          border-radius: 10px;
+          width: 60%;
+        }
+        #searchFormBtn {
+          margin-left: 5px;
+          background: center url('../images/search_icon.png') no-repeat;
+          background-size: contain;
+          width: 20px;
+          height: 20px;
+          border: transparent;
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
     }
     #navBtns {
       margin-right: 10px;
-    }
-  }
-}
-
-#movieHeader {
-  margin-top: 10px;
-  width: 100%;
-  height: 50px;
-  @include flexBox(row, center, center);
-  nav {
-    height: 50px;
-    width: 100%;
-    @include flexBox(row, space-between, center);
-    div {
       @include flexBox(row, center, center);
-      margin: 0px 50px;
-    }
-    #logoImg {
-      margin-left: 5px;
-      background: center url('../images/moviescooplogo.png') no-repeat;
-      background-size: contain;
-      width: 50px;
-      height: 50px;
-      margin-right: 20px;
-    }
-  }
-  #searchTopNav {
-    @include flexBox(row, space-between, center);
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    #logoSearch {
-      margin-left: 10px;
-      width: 60%;
-      @include flexBox(row, flex-start, center);
-      #search {
-        border: transparent;
-        border-radius: 10px;
-        width: 60%;
-      }
-      #searchBtn {
-        margin-left: 5px;
-        background: center url('../images/search_icon.png') no-repeat;
-        background-size: contain;
-        width: 20px;
-        height: 20px;
-        border: transparent;
-        &:hover {
-          cursor: pointer;
-        }
-        // border-radius: 0px;
-      }
-    }
-    #navBtns {
-      margin-right: 10px;
     }
   }
 }
