@@ -41,6 +41,39 @@ header #topNav #navBtns {
   margin-right: 10px;
 }
 
+#searchHeader {
+  margin-top: -50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#searchHeader #searchTopNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #760a08;
+}
+#searchHeader #searchTopNav #logoSearch {
+  margin-left: 10px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#searchHeader #searchTopNav #logoSearch form {
+  width: 80%;
+}
+#searchHeader #searchTopNav #logoSearch form #search {
+  width: 60%;
+}
+#searchHeader #searchTopNav #navBtns {
+  margin-right: 10px;
+}
+
 main {
   padding-top: 30px;
   width: 100%;
@@ -71,14 +104,14 @@ main .landingAuth #signup {
   align-items: center;
 }
 main #loginSection {
-  background-color: #6d597a;
+  background-color: #760a08;
 }
 main #signupSection {
-  background-color: #b56576;
+  background-color: #c14352;
 }
 main #topAuth {
   padding-bottom: 30px;
-  background-color: #355070;
+  background-color: #e2d6c5;
 }
 main #landingInfo {
   display: none;
@@ -105,39 +138,39 @@ main #bottomAuth {
     margin: 0px;
   }
   main #loginSection {
-    background-color: #6d597a;
+    background-color: #760a08;
     height: 100vh;
   }
   main #signupSection {
-    background-color: #b56576;
+    background-color: #c14352;
     height: 100vh;
   }
   main #topAuth {
-    background-color: #355070;
+    background-color: #e2d6c5;
   }
   main #landingInfo {
-    background-color: #6d597a;
+    background-color: #760a08;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   main #landingHowTo {
-    background-color: #b56576;
+    background-color: #c14352;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   main #landingEnd {
-    background-color: #e56b6f;
+    background-color: #c47318;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   main #bottomAuth {
-    background-color: #eaac8b;
+    background-color: #000;
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;

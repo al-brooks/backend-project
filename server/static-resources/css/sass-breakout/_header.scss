@@ -27,6 +27,29 @@ header {
     }
   }
 }
+#searchHeader {
+  margin-top: -50px;
+  @include flexBox(row, center, center);
+  #searchTopNav {
+    @include flexBox(row, space-between, center);
+    width: 100%;
+    background-color: $secondaryColor;
+    #logoSearch {
+      margin-left: 10px;
+      width: 60%;
+      @include flexBox(row, flex-start, center);
+      form {
+        width: 80%;
+        #search {
+          width: 60%;
+        }
+      }
+    }
+    #navBtns {
+      margin-right: 10px;
+    }
+  }
+}
 
 // tablet layout
 @media (min-width: 768px) {
