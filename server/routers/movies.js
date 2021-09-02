@@ -35,6 +35,7 @@ router.post('/add-review', (req, res) => {
   const movie_id = req.body.movie_id;
   const title = req.body.title;
   const body = req.body.review;
+  const movie_Title = req.body.movie_Title;
 
   db.none(
     'INSERT INTO reviews(title, body, user_id, movie_id)VALUES($1, $2, $3, $4)',

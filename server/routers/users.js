@@ -22,7 +22,16 @@ router.get('/:userid', authenticate, (req, res) => {
     [user_id]
   )
     .then((user) => {
-      res.render('useraccount', { user: user });
+      db.any(
+        `SELECT users.user_id, users.first_name, users.user_name, users.user_email, reviews.movie_id, reviews.movie_title, reviews.title, reviews.body, to_char(reviews.date_created, 'MON-DD-YYYY') AS "date_created" FROM reviews INNER JOIN users ON users.user_id = reviews.user_id WHERE users.user_id = $1`,
+        [user_id]
+      ).then((userReviews) => {
+        res.render('useraccount', {
+          user: user,
+          userReviews: userReviews,
+          user_id: req.session.user_id
+        });
+      });
     })
     .catch((error) => {
       res.send('An Error Occurred');

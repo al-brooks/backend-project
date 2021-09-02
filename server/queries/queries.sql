@@ -47,3 +47,10 @@ FROM reviews
 INNER JOIN users
 ON users.user_id = reviews.user_id
 WHERE movie_id = '[insert movie id]'
+
+ALTER TABLE reviews
+ADD COLUMN movie_title VARCHAR(100)
+
+UPDATE reviews
+SET movie_title = 'Aliens'
+WHERE movie_id = 'tt0090605'

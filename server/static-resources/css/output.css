@@ -332,13 +332,6 @@ body a {
   margin-bottom: 10px;
 }
 
-#userAccountMain {
-  border: 2px solid black;
-}
-#userAccountMain #userAccountSection {
-  border: 2px solid red;
-}
-
 #movieMain {
   margin-top: 30px;
   color: #760a08;
@@ -346,6 +339,21 @@ body a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#movieMain #userAccountSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #c14352;
+  border-radius: 10px;
+  padding: 10px;
+}
+#movieMain #userAccountSection h2 {
+  margin-bottom: 10px;
+}
+#movieMain h2 {
+  margin-bottom: 0px;
 }
 #movieMain #movieInfoSection {
   display: flex;
@@ -422,6 +430,11 @@ body a {
   flex-direction: column;
   justify-content: center;
   align-items: start;
+}
+#movieMain #postReviews .movieReview .movieTitle {
+  margin-bottom: 0;
+  border-bottom: 1px solid #000;
+  font-weight: bold;
 }
 #movieMain #postReviews .movieReview .reviewTitle {
   margin-bottom: 0;

@@ -27,15 +27,25 @@
             </div>
         </nav>
     </header>
-    <main id="userAccountMain">
+    <main id="movieMain">
         <section id="userAccountSection">
-            <h2>User Info Below</h2>
             {{#user}}
-            <span>{{first_name}}</span>
-            <span>{{last_name}}</span>
-            <span>{{user_name}}</span>
-            <span>{{user_email}}</span>
+            <h2>Hello {{first_name}}, Below is you info:</h2>
+            <span><b>username:</b> {{user_name}}</span>
+            <span><b>email:</b> {{user_email}}</span>
             {{/user}}
+        </section>
+        <h2>Your Reviews:</h2>
+        <section id='postReviews'>
+            {{#userReviews}}
+                <div class="movieReview">
+                    <h4 class="movieTitle">{{movie_title}}</h4>
+                    <h4 class="reviewTitle">{{title}}</h4>
+                    <p class="reviewBody">{{body}}</p>
+                    <span class="reviewUser">Reviewed by: {{user_name}}</span>
+                    <span class="reviewDateCreated">Review Written: {{date_created}}</span>
+                </div>
+            {{/userReviews}}  
         </section>
     </main>
 </body>

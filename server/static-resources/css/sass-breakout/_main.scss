@@ -26,17 +26,22 @@
   }
 }
 
-#userAccountMain {
-  @include testBorder(black);
-  #userAccountSection {
-    @include testBorder(red);
-  }
-}
-
 #movieMain {
   margin-top: 30px;
   color: $secondaryColor;
   @include flexBox(column, center, center);
+  #userAccountSection {
+    h2 {
+      margin-bottom: 10px;
+    }
+    @include flexBox(column, center, center);
+    border: 2px solid $thirdColor;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  h2 {
+    margin-bottom: 0px;
+  }
   #movieInfoSection {
     @include flexBox(row, center, center);
     #movieInfo {
@@ -96,6 +101,11 @@
       margin-bottom: 10px;
       border-bottom: 2px solid $primaryText;
       @include flexBox(column, center, start);
+      .movieTitle {
+        margin-bottom: 0;
+        border-bottom: 1px solid $primaryText;
+        font-weight: bold;
+      }
       .reviewTitle {
         margin-bottom: 0;
         font-weight: bold;
