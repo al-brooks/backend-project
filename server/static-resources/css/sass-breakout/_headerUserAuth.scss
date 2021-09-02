@@ -43,6 +43,9 @@
     #navBtns {
       margin-right: 15px;
       #loginBtn {
+        &:hover {
+          cursor: pointer;
+        }
         color: $secondaryText;
         font-weight: 200;
         background-color: $thirdColor;
@@ -51,6 +54,9 @@
         border: none;
       }
       #signupBtn {
+        &:hover {
+          cursor: pointer;
+        }
         color: $secondaryText;
         font-weight: 200;
         line-height: 2em;

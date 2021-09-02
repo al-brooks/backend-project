@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/output.css" />
     <title>Index</title>
 </head>
@@ -30,7 +33,7 @@
         <section id="topAuth">
             <h2>Movie Scoop</h2>
             <p>Join our community!</p> 
-            <span>{{message}}</span>
+            <span id="topAuthMsg">{{message}}</span>
             <a href="/users/login"><button class="loginBtn">Log in</button></a>
             <a href="/users/signup"><button class="signupBtn">Sign up</button></a>
         </section>
@@ -39,9 +42,6 @@
             <p>This is a movie loving Community! Share your movie interests, takes and opinions!</p>
         </section>
         <section id="landingPoster">
-            {{! <h2>How does it work?</h2>
-            <p>Search for your favorite movie. If there isn't a review for it already, write one! Look at top reviews and join the discussion!</p>
-            <span>Insert how to use the app</span> }}
         </section>
         <section id="landingEnd">
             <h2>Do you have more questions?</h2>

@@ -68,9 +68,6 @@
       margin-right: 15px;
       @include flexBox(row, center, center);
       #loginBtn {
-        &:hover {
-          cursor: pointer;
-        }
         margin-right: 5px;
         color: $secondaryText;
         font-weight: 200;
@@ -80,9 +77,6 @@
         border: none;
       }
       #signupBtn {
-        &:hover {
-          cursor: pointer;
-        }
         margin-right: 5px;
         color: $secondaryText;
         font-weight: 200;
@@ -92,9 +86,6 @@
         background-color: $secondaryColor;
       }
       #accountBtn {
-        &:hover {
-          cursor: pointer;
-        }
         margin-right: 5px;
         color: $secondaryText;
         font-weight: 200;
@@ -105,9 +96,6 @@
       }
       #signoutBtn {
         button {
-          &:hover {
-            cursor: pointer;
-          }
           margin-right: 5px;
           color: $secondaryText;
           font-weight: 200;

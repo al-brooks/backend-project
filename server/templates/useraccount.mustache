@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/output.css" />
     <title>User Account</title>
 </head>
@@ -24,15 +27,25 @@
             </div>
         </nav>
     </header>
-    <main>
-        <section>
-            <h2>User Info Below</h2>
+    <main id="movieMain">
+        <section id="userAccountSection">
             {{#user}}
-            <span>{{first_name}}</span>
-            <span>{{last_name}}</span>
-            <span>{{user_name}}</span>
-            <span>{{user_email}}</span>
+            <h2>Hello {{first_name}}, Below is your info:</h2>
+            <span><b>username:</b> {{user_name}}</span>
+            <span><b>email:</b> {{user_email}}</span>
             {{/user}}
+        </section>
+        <h2>Your Reviews:</h2>
+        <section id='postReviews'>
+            {{#userReviews}}
+                <div class="movieReview">
+                    <h4 class="movieTitle">{{movie_title}}</h4>
+                    <h4 class="reviewTitle">{{title}}</h4>
+                    <p class="reviewBody">{{body}}</p>
+                    <span class="reviewUser">Reviewed by: {{user_name}}</span>
+                    <span class="reviewDateCreated">Review Written: {{date_created}}</span>
+                </div>
+            {{/userReviews}}  
         </section>
     </main>
 </body>

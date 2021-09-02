@@ -36,3 +36,21 @@ ADD COLUMN user_email TEXT UNIQUE
 
 -- Delete all test users from users table
 DELETE FROM users
+
+-- Pulling review info from Database
+SELECT
+users.user_name,
+reviews.title,
+reviews.body,
+to_char(reviews.date_created, 'MON-DD-YYYY') AS "date_created"
+FROM reviews
+INNER JOIN users
+ON users.user_id = reviews.user_id
+WHERE movie_id = '[insert movie id]'
+
+ALTER TABLE reviews
+ADD COLUMN movie_title VARCHAR(100)
+
+UPDATE reviews
+SET movie_title = 'Aliens'
+WHERE movie_id = 'tt0090605'

@@ -15,7 +15,7 @@
         border-radius: 10px;
         padding-bottom: 20px;
         margin: 10px 0px;
-        width: 300px;
+        width: 320px;
         height: 400px;
         img {
           width: 200px;
@@ -26,9 +26,139 @@
   }
 }
 
-#moviesMain {
-  .movieReviews {
+#movieMain {
+  margin-top: 30px;
+  color: $secondaryColor;
+  @include flexBox(column, center, center);
+  #userAccountSection {
+    h2 {
+      margin-bottom: 10px;
+    }
     @include flexBox(column, center, center);
+    border: 2px solid $thirdColor;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px 20px;
+  }
+  h2 {
+    margin-bottom: 0px;
+  }
+  #movieInfoSection {
+    @include flexBox(row, center, center);
+    #movieInfo {
+      width: 200px;
+      @include flexBox(column, center, center);
+      h4 {
+        margin-bottom: 5px;
+      }
+    }
+    #moviePoster {
+      width: 175px;
+      height: 275px;
+    }
+  }
+  #addReviews {
+    margin-top: 25px;
+    @include flexBox(column, center, center);
+    span {
+      margin-bottom: 10px;
+      color: $secondaryColor;
+    }
+    form {
+      @include flexBox(column, center, center);
+      #reviewTitle {
+        height: 25px;
+        width: 350px;
+        margin-bottom: 5px;
+      }
+      #reviewBody {
+        height: 100px;
+        width: 350px;
+        margin-bottom: 5px;
+        font-family: 'Roboto', sans-serif;
+      }
+      #moviescoopbtn {
+        &:hover {
+          cursor: pointer;
+        }
+        width: 200px;
+        margin-right: 5px;
+        color: $secondaryText;
+        font-weight: 200;
+        background-color: $thirdColor;
+        line-height: 2em;
+        border-radius: 3px;
+        border: none;
+      }
+    }
+  }
+  #postReviews {
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid $thirdColor;
+    border-radius: 10px;
+    .movieReview {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid $primaryText;
+      @include flexBox(column, center, start);
+      .movieTitle {
+        margin-bottom: 0;
+        border-bottom: 1px solid $primaryText;
+        font-weight: bold;
+      }
+      .reviewTitle {
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+      .reviewBody {
+        margin-bottom: 10px;
+        color: $primaryText;
+      }
+      .reviewUser {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .reviewDate {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+#homeMain {
+  padding-top: 30px;
+  width: 100%;
+  section {
+    padding-top: 30px;
+    height: 500px;
+  }
+  h2 {
+    width: 80%;
+    text-align: center;
+    margin: 0px;
+  }
+  p {
+    text-align: center;
+    width: 50%;
+  }
+  #homeInfo {
+    @include flexBox(column, center, center);
+    padding-bottom: 30px;
+    background-color: $primaryColor;
+    h2 {
+      color: $primaryText;
+      font-size: 44px;
+    }
+    p {
+      color: $primaryText;
+      font-size: 24px;
+      font-weight: 100;
+    }
+  }
+  #homePoster {
+    @include flexBox(column, center, center);
+    background: center / cover url('../images/index5.jpeg') no-repeat;
   }
 }
 

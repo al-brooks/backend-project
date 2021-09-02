@@ -4,64 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/moviedetails.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/output.css" />
     <title>The Scoops!</title>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="container-fluid">
-                
-              <div class="navbar-brand">
-                <img id = "logoimg" src ="/images/moviescooplogo.png"alt="">
-              </div>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </div>
-              </div>
-            
-                <form method="get" action="/users/{{user_id}}">
-                    <button>Accounts</button>
+<body id="searchBody">
+    <header id="searchHeader">
+        <nav id="searchTopNav">
+            <div id="logoSearch">
+                <a href="/users/home" id="logoImg"></a>
+                <form method="POST" action="/search/movies">
+                    <input id="search" type="text" name="search" placeholder="search movies"/>
+                    <button id="searchFormBtn"></button>
                 </form>
-                <form method="POST" action="/users/signout">
+            </div>
+            <div id="navBtns">
+                <button id="accountBtn"><a href="/users/{{user_id}}">Account</a></button>
+                <form id="signoutBtn" method="POST" action="/users/signout">
                     <button>Signout</button>
                 </form>
-
             </div>
         </nav>
-          
     </header>
-    <main>
-        <ul>
-           <li>{{movie.Title}}</li> 
-           <li>{{movie.Year}}</li>
-            <li>{{movie.Rated}}</li>
-            <li>{{movie.Genre}}</li>
-            <li> {{movie.Director}}</li>
-    </ul>
-     <img id = "movieposterid" src={{movie.Poster}} alt="poster"/>
-
-
-        <section>
-            <span>Write a scoop on your favorite movie!</span>
+    <main id="movieMain">
+        <section id='movieInfoSection'>
+            <div id='movieInfo'>
+                <h4>{{movie.Title}}</h4>
+                <span>{{movie.Year}}</span>
+                <span>{{movie.Rated}}</span>
+                <span>{{movie.Genre}}</span>
+                <span>{{movie.Director}}</span>
+            </div>
+            <img id='moviePoster' src={{movie.Poster}} alt="poster"/>
+        </section>
+        <section id="addReviews">
+            <span>Write a review for your favorite movie!</span>
             <form method = 'POST' action = '/movies/add-review'>
+                <h5>{{movie.Title}}</h5>
                 <input type = 'hidden' value = {{movie.imdbID}} name = 'movie_id'/>
+                <input type = 'hidden' value = '{{movie.Title}}' name = 'movie_Title'/>
                 <input type='text' id='reviewTitle' name='title' placeholder='Enter Title'/>
-                <input type = "textarea" id = "reviewBody" name = "review" placeholder="Please write your review here"/>
+                <textarea wrap="soft" id = "reviewBody" name = "review" placeholder="Please write your review here"></textarea>
                 <button id = "moviescoopbtn">Submit</button>
             </form>
         </section>
         <section id='postReviews'>
             {{#allReviews}}
                 <div class="movieReview">
-                    <h4>{{title}}</h4>
-                    <p>{{body}}</p>
-                    <span>{{user_id}}</span>
-                    <span>{{date_created}}</span>
+                    <h4 class="reviewTitle">{{title}}</h4>
+                    <p class="reviewBody">{{body}}</p>
+                    <span class="reviewUser">Reviewed by: {{user_name}}</span>
+                    <span class="reviewDateCreated">Review Written: {{date_created}}</span>
                 </div>
             {{/allReviews}}  
         </section>
