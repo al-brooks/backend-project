@@ -42,6 +42,9 @@
     #movieInfo {
       width: 200px;
       @include flexBox(column, center, center);
+      h4 {
+        margin-bottom: 5px;
+      }
     }
     #moviePoster {
       width: 175px;
@@ -52,6 +55,7 @@
     margin-top: 25px;
     @include flexBox(column, center, center);
     span {
+      margin-bottom: 10px;
       color: $secondaryColor;
     }
     form {

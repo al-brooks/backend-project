@@ -360,6 +360,9 @@ body a {
   justify-content: center;
   align-items: center;
 }
+#movieMain #movieInfoSection #movieInfo h4 {
+  margin-bottom: 5px;
+}
 #movieMain #movieInfoSection #moviePoster {
   width: 175px;
   height: 275px;
@@ -372,6 +375,7 @@ body a {
   align-items: center;
 }
 #movieMain #addReviews span {
+  margin-bottom: 10px;
   color: #760a08;
 }
 #movieMain #addReviews form #moviescoopbtn {
