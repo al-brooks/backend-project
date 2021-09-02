@@ -40,21 +40,21 @@
             <img id='moviePoster' src={{movie.Poster}} alt="poster"/>
         </section>
         <section id="addReviews">
-            <span>Write a scoop on your favorite movie!</span>
+            <span>Write a review for your favorite movie!</span>
             <form method = 'POST' action = '/movies/add-review'>
                 <input type = 'hidden' value = {{movie.imdbID}} name = 'movie_id'/>
                 <input type='text' id='reviewTitle' name='title' placeholder='Enter Title'/>
-                <input type = "textarea" id = "reviewBody" name = "review" placeholder="Please write your review here"/>
+                <textarea wrap="soft" id = "reviewBody" name = "review" placeholder="Please write your review here"></textarea>
                 <button id = "moviescoopbtn">Submit</button>
             </form>
         </section>
         <section id='postReviews'>
             {{#allReviews}}
                 <div class="movieReview">
-                    <h4>{{title}}</h4>
-                    <p>{{body}}</p>
-                    <span>{{user_id}}</span>
-                    <span>{{date_created}}</span>
+                    <h4 class="reviewTitle">{{title}}</h4>
+                    <p class="reviewBody">{{body}}</p>
+                    <span class="reviewUser">Reviewed by: {{user_name}}</span>
+                    <span class="reviewDateCreated">Review Written: {{date_created}}</span>
                 </div>
             {{/allReviews}}  
         </section>

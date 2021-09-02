@@ -18,7 +18,7 @@ router.get('/:movie_id', (req, res) => {
   const movie_id = req.params.movie_id;
   fetchMovieById(movie_id, function (movie) {
     db.any(
-      'SELECT user_id, body, title,date_created FROM reviews WHERE movie_id = $1',
+      `SELECT users.user_name, reviews.title, reviews.body, to_char(reviews.date_created, 'MON-DD-YYYY') AS "date_created" FROM reviews INNER JOIN users ON users.user_id = reviews.user_id WHERE movie_id = $1`,
       [movie_id]
     ).then((reviews) => {
       res.render('moviedetails', {

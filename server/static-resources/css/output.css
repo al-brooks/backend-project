@@ -378,7 +378,25 @@ body a {
   margin-bottom: 10px;
   color: #760a08;
 }
+#movieMain #addReviews form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#movieMain #addReviews form #reviewTitle {
+  height: 25px;
+  width: 350px;
+  margin-bottom: 5px;
+}
+#movieMain #addReviews form #reviewBody {
+  height: 100px;
+  width: 350px;
+  margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+}
 #movieMain #addReviews form #moviescoopbtn {
+  width: 200px;
   margin-right: 5px;
   color: #fff;
   font-weight: 200;
@@ -390,11 +408,35 @@ body a {
 #movieMain #addReviews form #moviescoopbtn:hover {
   cursor: pointer;
 }
-#movieMain .movieReviews {
+#movieMain #postReviews {
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid #c14352;
+  border-radius: 10px;
+}
+#movieMain #postReviews .movieReview {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+}
+#movieMain #postReviews .movieReview .reviewTitle {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+#movieMain #postReviews .movieReview .reviewBody {
+  margin-bottom: 10px;
+  color: #000;
+}
+#movieMain #postReviews .movieReview .reviewUser {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#movieMain #postReviews .movieReview .reviewDate {
+  margin-bottom: 5px;
 }
 
 #landingMain {
