@@ -17,7 +17,7 @@ const connectionString = process.env.DB_CONNECT;
 global.db = pgp(connectionString);
 global.bcrypt = require('bcryptjs');
 // PORT
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 // create router variables
 const usersRouter = require('./routers/users');
 const moviesRouter = require('./routers/movies');
