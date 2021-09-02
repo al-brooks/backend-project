@@ -1,0 +1,72 @@
+@media (min-width: 992px)
+{.navbar-expand-lg .navbar-collapse
+     {
+    display: flex!important;
+    justify-content: space-between;
+    flex-basis: auto;
+
+}
+
+body {
+    background-color: #e2d6c5;
+}
+
+
+#logoimg {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-self: baseline;
+}   
+
+button {
+    background-color: #760a08;
+    color:#e2d6c5;
+    border-radius: 8px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#movieposterid {
+  width: 175px;
+  height: 275px;
+}
+
+.navbar {
+    background-color: #e2d6c5;
+    justify-content: flex-start;
+}
+
+.container-fluid {
+    background-color: #e2d6c5;
+    justify-content: flex-start;
+}
+
+ul {
+    list-style: none;
+    color:#760a08;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    justify-content: flex-start; 
+}
+
+span {
+    color:#760a08;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+section {
+    color:#760a08;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
