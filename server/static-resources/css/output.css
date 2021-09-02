@@ -29,6 +29,10 @@ body a {
   text-decoration: none;
 }
 
+#moviescoopbtn {
+  background-color: aqua;
+}
+
 #searchHeader {
   margin-top: 0px;
   width: 100%;
@@ -118,6 +122,9 @@ body a {
   border-radius: 3px;
   border: none;
 }
+#searchHeader #searchTopNav #navBtns #loginBtn:hover {
+  cursor: pointer;
+}
 #searchHeader #searchTopNav #navBtns #signupBtn {
   margin-right: 5px;
   color: #fff;
@@ -126,6 +133,9 @@ body a {
   border-radius: 3px;
   border: none;
   background-color: #760a08;
+}
+#searchHeader #searchTopNav #navBtns #signupBtn:hover {
+  cursor: pointer;
 }
 #searchHeader #searchTopNav #navBtns #accountBtn {
   margin-right: 5px;
@@ -136,6 +146,9 @@ body a {
   border-radius: 3px;
   border: none;
 }
+#searchHeader #searchTopNav #navBtns #accountBtn:hover {
+  cursor: pointer;
+}
 #searchHeader #searchTopNav #navBtns #signoutBtn button {
   margin-right: 5px;
   color: #fff;
@@ -144,6 +157,9 @@ body a {
   border-radius: 3px;
   border: none;
   background-color: #760a08;
+}
+#searchHeader #searchTopNav #navBtns #signoutBtn button:hover {
+  cursor: pointer;
 }
 
 #landingHeader {
@@ -211,6 +227,9 @@ body a {
   border-radius: 3px;
   border: none;
 }
+#landingHeader #topNav #guestLogin form .btn:hover {
+  cursor: pointer;
+}
 
 #userAuthHeader #userAuthNav {
   display: flex;
@@ -268,6 +287,9 @@ body a {
   border-radius: 3px;
   border: none;
 }
+#userAuthHeader #userAuthNav #navBtns #loginBtn:hover {
+  cursor: pointer;
+}
 #userAuthHeader #userAuthNav #navBtns #signupBtn {
   color: #fff;
   font-weight: 200;
@@ -275,6 +297,9 @@ body a {
   border-radius: 3px;
   border: none;
   background-color: #760a08;
+}
+#userAuthHeader #userAuthNav #navBtns #signupBtn:hover {
+  cursor: pointer;
 }
 
 #searchMain {
@@ -314,7 +339,54 @@ body a {
   border: 2px solid red;
 }
 
-#moviesMain .movieReviews {
+#movieMain {
+  margin-top: 30px;
+  color: #760a08;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#movieMain #movieInfoSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#movieMain #movieInfoSection #movieInfo {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#movieMain #movieInfoSection #moviePoster {
+  width: 175px;
+  height: 275px;
+}
+#movieMain #addReviews {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#movieMain #addReviews span {
+  color: #760a08;
+}
+#movieMain #addReviews form #moviescoopbtn {
+  margin-right: 5px;
+  color: #fff;
+  font-weight: 200;
+  background-color: #c14352;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+}
+#movieMain #addReviews form #moviescoopbtn:hover {
+  cursor: pointer;
+}
+#movieMain .movieReviews {
   display: flex;
   flex-direction: column;
   justify-content: center;

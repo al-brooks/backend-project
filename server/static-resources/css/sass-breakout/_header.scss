@@ -1,7 +1,6 @@
 // import mixins
 @import './mixins';
 //mobile layout first
-<<<<<<< HEAD
 
 #searchHeader {
   margin-top: 0px;
@@ -45,23 +44,6 @@
         }
       }
       form {
-=======
-header {
-    margin-top: 50px;
-    @include flexBox(row, center, center);
-    
-        #logoimg {
-            height: 120px;
-            width:120px;
-            background: center url(../images/moviescooplogo.png);
-            background-size: contain;
-
-        }
-    #topNav {
-        @include flexBox(row, space-between, center);
-        position: fixed;
-        top: 0px;
->>>>>>> moviestyle
         width: 100%;
         #search {
           border: transparent;
@@ -86,6 +68,9 @@ header {
       margin-right: 15px;
       @include flexBox(row, center, center);
       #loginBtn {
+        &:hover {
+          cursor: pointer;
+        }
         margin-right: 5px;
         color: $secondaryText;
         font-weight: 200;
@@ -95,6 +80,9 @@ header {
         border: none;
       }
       #signupBtn {
+        &:hover {
+          cursor: pointer;
+        }
         margin-right: 5px;
         color: $secondaryText;
         font-weight: 200;
@@ -104,6 +92,9 @@ header {
         background-color: $secondaryColor;
       }
       #accountBtn {
+        &:hover {
+          cursor: pointer;
+        }
         margin-right: 5px;
         color: $secondaryText;
         font-weight: 200;
@@ -114,6 +105,9 @@ header {
       }
       #signoutBtn {
         button {
+          &:hover {
+            cursor: pointer;
+          }
           margin-right: 5px;
           color: $secondaryText;
           font-weight: 200;
@@ -124,11 +118,7 @@ header {
         }
       }
     }
-<<<<<<< HEAD
   }
-=======
-    
->>>>>>> moviestyle
 }
 
 // tablet layout

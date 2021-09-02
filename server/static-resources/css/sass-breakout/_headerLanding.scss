@@ -47,6 +47,9 @@
       margin-right: 15px;
       form {
         .btn {
+          &:hover {
+            cursor: pointer;
+          }
           color: $secondaryText;
           font-weight: 200;
           background-color: $thirdColor;

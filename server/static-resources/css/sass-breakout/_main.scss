@@ -33,7 +33,42 @@
   }
 }
 
-#moviesMain {
+#movieMain {
+  margin-top: 30px;
+  color: $secondaryColor;
+  @include flexBox(column, center, center);
+  #movieInfoSection {
+    @include flexBox(row, center, center);
+    #movieInfo {
+      width: 200px;
+      @include flexBox(column, center, center);
+    }
+    #moviePoster {
+      width: 175px;
+      height: 275px;
+    }
+  }
+  #addReviews {
+    margin-top: 25px;
+    @include flexBox(column, center, center);
+    span {
+      color: $secondaryColor;
+    }
+    form {
+      #moviescoopbtn {
+        &:hover {
+          cursor: pointer;
+        }
+        margin-right: 5px;
+        color: $secondaryText;
+        font-weight: 200;
+        background-color: $thirdColor;
+        line-height: 2em;
+        border-radius: 3px;
+        border: none;
+      }
+    }
+  }
   .movieReviews {
     @include flexBox(column, center, center);
   }
