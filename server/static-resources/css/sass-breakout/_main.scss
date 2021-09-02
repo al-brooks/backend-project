@@ -26,6 +26,13 @@
   }
 }
 
+#userAccountMain {
+  @include testBorder(black);
+  #userAccountSection {
+    @include testBorder(red);
+  }
+}
+
 #moviesMain {
   .movieReviews {
     @include flexBox(column, center, center);

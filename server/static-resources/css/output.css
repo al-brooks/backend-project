@@ -307,6 +307,13 @@ body a {
   margin-bottom: 10px;
 }
 
+#userAccountMain {
+  border: 2px solid black;
+}
+#userAccountMain #userAccountSection {
+  border: 2px solid red;
+}
+
 #moviesMain .movieReviews {
   display: flex;
   flex-direction: column;
