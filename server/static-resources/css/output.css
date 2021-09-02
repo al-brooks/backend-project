@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  font-family: "Roboto", sans-serif;
 }
 body a {
   color: inherit;
@@ -7,18 +8,21 @@ body a {
 }
 
 #userLoginBody {
+  font-family: "Roboto", sans-serif;
   margin: 0px;
   background: center url("../images/login2.png") no-repeat;
   background-size: cover;
 }
 
 #userSignUpBody {
+  font-family: "Roboto", sans-serif;
   margin: 0px;
   background: center url("../images/signup-2.jpeg") no-repeat;
   background-size: cover;
 }
 
 #searchBody {
+  font-family: "Roboto", sans-serif;
   background-color: #e2d6c5;
   display: flex;
   flex-direction: column;
@@ -27,10 +31,6 @@ body a {
 }
 #searchBody a {
   text-decoration: none;
-}
-
-#moviescoopbtn {
-  background-color: aqua;
 }
 
 #searchHeader {
