@@ -3,13 +3,61 @@
   // margin-top: -50px;
   // @include flexBox(row, center, center);
   #userAuthNav {
-    // @include flexBox(row, space-between, center);
-    // position: fixed;
-    // top: 10px;
+    @include flexBox(row, space-between, center);
     width: 100%;
-    // background-color: transparent;
+    margin-right: 15px;
+    #userAuthSearch {
+      margin-left: 10px;
+      width: 60%;
+      @include flexBox(row, flex-start, center);
+      #logoImg {
+        margin-left: 5px;
+        background: center url('../images/moviescooplogo.png') no-repeat;
+        background-size: contain;
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+      }
+      form {
+        width: 100%;
+        #search {
+          border: transparent;
+          border-radius: 10px;
+          height: 20px;
+          width: 60%;
+        }
+        #searchFormBtn {
+          margin-left: 5px;
+          background: center url('../images/search_icon.png') no-repeat;
+          background-size: contain;
+          width: 15px;
+          height: 15px;
+          border: transparent;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
     #navBtns {
       margin-right: 15px;
+      #loginBtn {
+        color: $secondaryText;
+        font-weight: 200;
+        background-color: $thirdColor;
+        line-height: 2em;
+        border-radius: 3px;
+        border: none;
+      }
+      #signupBtn {
+        color: $secondaryText;
+        font-weight: 200;
+        line-height: 2em;
+        border-radius: 3px;
+        border: none;
+        background-color: $secondaryColor;
+      }
     }
   }
 }

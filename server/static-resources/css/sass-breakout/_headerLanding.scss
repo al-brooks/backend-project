@@ -43,11 +43,18 @@
         }
       }
     }
-    #navBtns {
-      margin-right: 15px;
-    }
     #guestLogin {
       margin-right: 15px;
+      form {
+        .btn {
+          color: $secondaryText;
+          font-weight: 200;
+          background-color: $thirdColor;
+          line-height: 2em;
+          border-radius: 3px;
+          border: none;
+        }
+      }
     }
   }
 }

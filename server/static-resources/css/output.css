@@ -2,6 +2,7 @@ body {
   margin: 0px;
 }
 body a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -108,6 +109,42 @@ body a {
   justify-content: center;
   align-items: center;
 }
+#searchHeader #searchTopNav #navBtns #loginBtn {
+  margin-right: 5px;
+  color: #fff;
+  font-weight: 200;
+  background-color: #c14352;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+}
+#searchHeader #searchTopNav #navBtns #signupBtn {
+  margin-right: 5px;
+  color: #fff;
+  font-weight: 200;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+  background-color: #760a08;
+}
+#searchHeader #searchTopNav #navBtns #accountBtn {
+  margin-right: 5px;
+  color: #fff;
+  font-weight: 200;
+  background-color: #c14352;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+}
+#searchHeader #searchTopNav #navBtns #signoutBtn button {
+  margin-right: 5px;
+  color: #fff;
+  font-weight: 200;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+  background-color: #760a08;
+}
 
 #landingHeader {
   margin-top: -50px;
@@ -163,21 +200,85 @@ body a {
 #landingHeader #topNav #logoSearch form #searchFormBtn:hover {
   cursor: pointer;
 }
-#landingHeader #topNav #navBtns {
-  margin-right: 15px;
-}
 #landingHeader #topNav #guestLogin {
   margin-right: 15px;
 }
+#landingHeader #topNav #guestLogin form .btn {
+  color: #fff;
+  font-weight: 200;
+  background-color: #c14352;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+}
 
 #userAuthHeader #userAuthNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  margin-right: 15px;
+}
+#userAuthHeader #userAuthNav #userAuthSearch {
+  margin-left: 10px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#userAuthHeader #userAuthNav #userAuthSearch #logoImg {
+  margin-left: 5px;
+  background: center url("../images/moviescooplogo.png") no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+#userAuthHeader #userAuthNav #userAuthSearch form {
+  width: 100%;
+}
+#userAuthHeader #userAuthNav #userAuthSearch form #search {
+  border: transparent;
+  border-radius: 10px;
+  height: 20px;
+  width: 60%;
+}
+#userAuthHeader #userAuthNav #userAuthSearch form #searchFormBtn {
+  margin-left: 5px;
+  background: center url("../images/search_icon.png") no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  border: transparent;
+}
+#userAuthHeader #userAuthNav #userAuthSearch form #searchFormBtn:hover {
+  cursor: pointer;
 }
 #userAuthHeader #userAuthNav #navBtns {
   margin-right: 15px;
 }
+#userAuthHeader #userAuthNav #navBtns #loginBtn {
+  color: #fff;
+  font-weight: 200;
+  background-color: #c14352;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+}
+#userAuthHeader #userAuthNav #navBtns #signupBtn {
+  color: #fff;
+  font-weight: 200;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+  background-color: #760a08;
+}
 
 #searchMain {
+  margin-top: 25px;
   height: 500px;
 }
 #searchMain section #searchResults {
@@ -221,6 +322,31 @@ body a {
   padding-top: 30px;
   height: 100vh;
 }
+#landingMain section .loginBtn {
+  text-align: center;
+  width: 200px;
+  margin-bottom: 7px;
+  font-weight: 200;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  background-color: #c14352;
+}
+#landingMain section .loginBtn:hover {
+  cursor: pointer;
+}
+#landingMain section .signupBtn {
+  text-align: center;
+  width: 200px;
+  margin-bottom: 7px;
+  color: #fff;
+  font-weight: 200;
+  background-color: #760a08;
+  line-height: 2em;
+  border-radius: 3px;
+  border: none;
+}
 #landingMain h2 {
   margin: 0px;
 }
@@ -233,11 +359,11 @@ body a {
   background: center/cover url("../images/login2.png") no-repeat;
 }
 #landingMain #topAuth h2 {
-  color: whitesmoke;
+  color: #fff;
   font-size: 44px;
 }
 #landingMain #topAuth p {
-  color: aliceblue;
+  color: #fff;
   font-size: 24px;
   font-weight: 100;
 }
@@ -247,43 +373,34 @@ body a {
   background-color: #e2d6c5;
 }
 #landingMain #landingInfo h2 {
-  color: black;
+  color: #000;
   font-size: 44px;
 }
 #landingMain #landingInfo p {
-  color: #5013f7;
+  color: #000;
   font-size: 24px;
   font-weight: 100;
 }
-#landingMain #landingHowTo {
+#landingMain #landingPoster {
   display: none;
   background: center/cover url("../images/index5.jpeg") no-repeat;
-}
-#landingMain #landingHowTo h2 {
-  color: aliceblue;
-  font-size: 44px;
-}
-#landingMain #landingHowTo p {
-  color: aliceblue;
-  font-size: 24px;
-  font-weight: 100;
 }
 #landingMain #landingEnd {
   display: none;
   background-color: #e2d6c5;
 }
 #landingMain #landingEnd h2 {
-  color: #f9f9fd;
+  color: #000;
   font-size: 44px;
 }
 #landingMain #landingEnd p {
-  color: aliceblue;
+  color: #000;
   font-size: 24px;
   font-weight: 100;
 }
 #landingMain #bottomAuth {
   display: none;
-  background: center/cover url("../images/signup.jpeg") no-repeat;
+  background: center/cover url("../images/index03.jpeg") no-repeat;
 }
 #landingMain #bottomAuth h2 {
   color: aliceblue;
@@ -312,7 +429,7 @@ body a {
     justify-content: center;
     align-items: center;
   }
-  #landingMain #landingHowTo {
+  #landingMain #landingPoster {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -343,12 +460,11 @@ body a {
   font-family: sans-serif;
 }
 #userAuthMain #loginSection h2 {
-  float: right;
-  color: #0c745d;
-  font-size: 40px;
-  border-bottom: 6px solid #4caf50;
-  margin-bottom: 50px;
-  padding: 13px 0;
+  color: #fff;
+  font-size: 35px;
+  border-bottom: 3px solid #fff;
+  margin-bottom: 10px;
+  padding: 5px 0px;
 }
 #userAuthMain #loginSection #login {
   display: flex;
@@ -357,27 +473,27 @@ body a {
   align-items: center;
 }
 #userAuthMain #loginSection #login input {
-  margin: 6px auto;
-  text-align: center;
-  width: 200px;
-  outline: none;
-  border-radius: 8px;
-  transition: 0.25s;
-  font-size: 18px;
   background-color: #fff;
+  margin: 3px auto;
+  padding: 3px 0px 3px 5px;
+  width: 190px;
+  border: none;
+  border-radius: 3px;
 }
 #userAuthMain #loginSection #login button {
-  display: block;
-  margin: 6px auto;
   text-align: center;
-  padding: 0;
-  width: 100px;
+  width: 200px;
+  line-height: 2em;
   outline: none;
-  border-radius: 8px;
+  border: none;
+  border-radius: 3px;
   transition: 0.25s;
-  font-size: 18px;
+  color: #fff;
   font-weight: 200;
-  background-color: #e9f5f5;
+  background-color: #c14352;
+}
+#userAuthMain #loginSection #login button:hover {
+  cursor: pointer;
 }
 #userAuthMain #signupSection {
   display: flex;
@@ -388,9 +504,9 @@ body a {
   width: 100%;
 }
 #userAuthMain #signupSection h2 {
-  color: #8a1111;
+  color: #760a08;
   font-size: 35px;
-  border-bottom: 3px solid #010701;
+  border-bottom: 3px solid #000;
   margin-bottom: 10px;
   padding: 5px 0px;
 }
@@ -419,7 +535,7 @@ body a {
   transition: 0.25s;
   color: #fff;
   font-weight: 200;
-  background-color: #c14352;
+  background-color: #760a08;
 }
 #userAuthMain #signupSection #signup button:hover {
   cursor: pointer;

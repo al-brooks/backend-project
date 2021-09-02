@@ -1,5 +1,3 @@
-const authenticate = require('../authentication/authenticate');
-
 const router = express.Router();
 // const fetchMovieById = require('../static-resources/js/fetchById');
 

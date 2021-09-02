@@ -5,6 +5,31 @@
   section {
     padding-top: 30px;
     height: 100vh;
+    .loginBtn {
+      &:hover {
+        cursor: pointer;
+      }
+      text-align: center;
+      width: 200px;
+      margin-bottom: 7px;
+      font-weight: 200;
+      line-height: 2em;
+      border-radius: 3px;
+      border: none;
+      color: $secondaryText;
+      background-color: $thirdColor;
+    }
+    .signupBtn {
+      text-align: center;
+      width: 200px;
+      margin-bottom: 7px;
+      color: $secondaryText;
+      font-weight: 200;
+      background-color: $secondaryColor;
+      line-height: 2em;
+      border-radius: 3px;
+      border: none;
+    }
   }
   h2 {
     margin: 0px;
@@ -14,11 +39,11 @@
     padding-bottom: 30px;
     background: center / cover url('../images/login2.png') no-repeat;
     h2 {
-      color: whitesmoke;
+      color: $secondaryText;
       font-size: 44px;
     }
     p {
-      color: aliceblue;
+      color: $secondaryText;
       font-size: 24px;
       font-weight: 100;
     }
@@ -28,44 +53,35 @@
     padding-bottom: 30px;
     background-color: $primaryColor;
     h2 {
-      color: black;
+      color: $primaryText;
       font-size: 44px;
     }
     p {
-      color: rgb(80, 19, 247);
+      color: $primaryText;
       font-size: 24px;
       font-weight: 100;
     }
   }
-  #landingHowTo {
+  #landingPoster {
     display: none;
     background: center / cover url('../images/index5.jpeg') no-repeat;
-    h2 {
-      color: aliceblue;
-      font-size: 44px;
-    }
-    p {
-      color: aliceblue;
-      font-size: 24px;
-      font-weight: 100;
-    }
   }
   #landingEnd {
     display: none;
     background-color: $primaryColor;
     h2 {
-      color: rgb(249, 249, 253);
+      color: $primaryText;
       font-size: 44px;
     }
     p {
-      color: aliceblue;
+      color: $primaryText;
       font-size: 24px;
       font-weight: 100;
     }
   }
   #bottomAuth {
     display: none;
-    background: center / cover url('../images/signup.jpeg') no-repeat;
+    background: center / cover url('../images/index03.jpeg') no-repeat;
     h2 {
       color: aliceblue;
       font-size: 44px;
@@ -92,7 +108,7 @@
     #landingInfo {
       @include flexBox(column, center, center);
     }
-    #landingHowTo {
+    #landingPoster {
       @include flexBox(column, center, center);
     }
     #landingEnd {

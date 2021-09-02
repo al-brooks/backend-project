@@ -10,9 +10,17 @@
 <body id="userSignUpBody">
     <header id="userAuthHeader">
         <nav id=userAuthNav>
-            <button><a href="../">Home</a></button>
-            <button id="loginBtn"><a href="/users/login">Log in</a></button>
-            <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
+            <div id="userAuthSearch">
+                <a href="../" id="logoImg"></a>
+                <form method="POST" action="/search/movies">
+                    <input id="search" type="text" name="search" placeholder="search movies"/>
+                    <button id="searchFormBtn"></button>
+                </form>
+            </div>
+            <div id="navBtns">
+                <button id="loginBtn"><a href="/users/login">Log in</a></button>
+                <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
+            </div>
         </nav>
     </header>
     <main id="userAuthMain">

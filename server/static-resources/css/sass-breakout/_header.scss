@@ -67,6 +67,44 @@
     #navBtns {
       margin-right: 15px;
       @include flexBox(row, center, center);
+      #loginBtn {
+        margin-right: 5px;
+        color: $secondaryText;
+        font-weight: 200;
+        background-color: $thirdColor;
+        line-height: 2em;
+        border-radius: 3px;
+        border: none;
+      }
+      #signupBtn {
+        margin-right: 5px;
+        color: $secondaryText;
+        font-weight: 200;
+        line-height: 2em;
+        border-radius: 3px;
+        border: none;
+        background-color: $secondaryColor;
+      }
+      #accountBtn {
+        margin-right: 5px;
+        color: $secondaryText;
+        font-weight: 200;
+        background-color: $thirdColor;
+        line-height: 2em;
+        border-radius: 3px;
+        border: none;
+      }
+      #signoutBtn {
+        button {
+          margin-right: 5px;
+          color: $secondaryText;
+          font-weight: 200;
+          line-height: 2em;
+          border-radius: 3px;
+          border: none;
+          background-color: $secondaryColor;
+        }
+      }
     }
   }
 }

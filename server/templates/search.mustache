@@ -21,16 +21,16 @@
                 <button id="searchBtn"></button>
             </div>
             <div id="navBtns">
-            {{^isAuthenticated}}
-            <button id="loginBtn" class="loginBtn"><a href="/users/login">Log in</a></button>
-            <button id="signupBtn" class="signupBtn"><a href="/users/signup">Sign up</a></button>
-            {{/isAuthenticated}}
-            {{#isAuthenticated}}
-            <button id="accountBtn"><a href="/users/{{user_id}}">Account</a></button>
-            <form id="signoutBtn" method="POST" action="/users/signout">
-                <button>Signout</button>
-            </form>
-            {{/isAuthenticated}}
+                {{^isAuthenticated}}
+                <button id="loginBtn"><a href="/users/login">Log in</a></button>
+                <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
+                {{/isAuthenticated}}
+                {{#isAuthenticated}}
+                <button id="accountBtn"><a href="/users/{{user_id}}">Account</a></button>
+                <form id="signoutBtn" method="POST" action="/users/signout">
+                    <button>Signout</button>
+                </form>
+                {{/isAuthenticated}}
             </div>
         </nav>
     </header>
@@ -39,7 +39,7 @@
             <div id="searchResults">
                 {{#movies}}
                 <div id="movieDiv">
-                    <h4>{{Title}}</h4>
+                    <h5>{{Title}}</h5>
                     <img src="{{Poster}}"/>
                     <form method="GET" action="/movies/{{imdbID}}">
                         <button>see movie details</button>
