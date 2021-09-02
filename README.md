@@ -8,9 +8,10 @@ link
 ## App Description:
 ##Description UI Project building a web application to search movie reviews. Users are able to create a login and be able to leave a review on a movie they have seen.
 
-##Motivation We created this application because we wanted to create a movie review app that was very refreshing and more appealing to the eye. Our movie review app gives guests and users the opportunity to share their review on movies they have seen.
+##Motivation 
+ -We created this application because we wanted to create a movie review app that was very refreshing and more appealing to the eye. Our movie review app gives   guests and users the opportunity to share their review on movies they have seen.
 
-##Features -Home page is featured with a very classic background with an option to login as an User/ guest or sign up Movie Scoop give you an abundance of movies to see the details, ratings and review
+##Features -Home page is featured with a very classic background with an option to login as an User/Guest or to sign up on the App. Movie Scoop give you an abundance of movies to see the details, ratings, and reviews.
 
 ##Challenges and Solutions
 
