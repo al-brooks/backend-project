@@ -57,6 +57,6 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log('Server is running...');
 });
