@@ -42,8 +42,9 @@
         <section id="addReviews">
             <span>Write a review for your favorite movie!</span>
             <form method = 'POST' action = '/movies/add-review'>
+                <h5>{{movie.Title}}</h5>
                 <input type = 'hidden' value = {{movie.imdbID}} name = 'movie_id'/>
-                <input type = 'hidden' value = {{movie.Title}} name = 'movie_Title'/>
+                <input type = 'hidden' value = '{{movie.Title}}' name = 'movie_Title'/>
                 <input type='text' id='reviewTitle' name='title' placeholder='Enter Title'/>
                 <textarea wrap="soft" id = "reviewBody" name = "review" placeholder="Please write your review here"></textarea>
                 <button id = "moviescoopbtn">Submit</button>

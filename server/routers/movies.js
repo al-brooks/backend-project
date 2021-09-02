@@ -38,8 +38,8 @@ router.post('/add-review', (req, res) => {
   const movie_Title = req.body.movie_Title;
 
   db.none(
-    'INSERT INTO reviews(title, body, user_id, movie_id)VALUES($1, $2, $3, $4)',
-    [title, body, user_id, movie_id]
+    'INSERT INTO reviews(title, body, user_id, movie_id, movie_title)VALUES($1, $2, $3, $4, $5)',
+    [title, body, user_id, movie_id, movie_Title]
   ).then(() => {
     res.redirect(`/movies/${movie_id}`);
   });
