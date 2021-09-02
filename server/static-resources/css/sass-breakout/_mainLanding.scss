@@ -20,6 +20,9 @@
       background-color: $thirdColor;
     }
     .signupBtn {
+      &:hover {
+        cursor: pointer;
+      }
       text-align: center;
       width: 200px;
       margin-bottom: 7px;

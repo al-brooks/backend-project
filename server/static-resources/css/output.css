@@ -347,6 +347,9 @@ body a {
   border-radius: 3px;
   border: none;
 }
+#landingMain section .signupBtn:hover {
+  cursor: pointer;
+}
 #landingMain h2 {
   margin: 0px;
 }
