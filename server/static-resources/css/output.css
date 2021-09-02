@@ -499,6 +499,11 @@ body a {
   font-size: 24px;
   font-weight: 100;
 }
+#landingMain #topAuth #topAuthMsg {
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+}
 #landingMain #landingInfo {
   display: none;
   padding-bottom: 30px;
@@ -598,6 +603,11 @@ body a {
   margin-bottom: 10px;
   padding: 5px 0px;
 }
+#userAuthMain #loginSection #authMsg {
+  color: #fff;
+  font-weight: bolder;
+  margin: 10px 0;
+}
 #userAuthMain #loginSection #login {
   display: flex;
   flex-direction: column;
@@ -641,6 +651,11 @@ body a {
   border-bottom: 3px solid #000;
   margin-bottom: 10px;
   padding: 5px 0px;
+}
+#userAuthMain #signupSection #authMsg {
+  color: #c14352;
+  font-weight: bolder;
+  margin: 10px 0;
 }
 #userAuthMain #signupSection #signup {
   display: flex;
