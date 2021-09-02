@@ -6,11 +6,23 @@
 //mobile layout first
 body {
   margin: 0px;
-  @include flexBox(column, center, center);
   a {
     text-decoration: none;
   }
 }
+
+#userLoginBody {
+  margin: 0px;
+  background: center url('../images/login2.png') no-repeat;
+  background-size: cover;
+}
+
+#userSignUpBody {
+  margin: 0px;
+  background: center url('../images/signup-2.jpeg') no-repeat;
+  background-size: cover;
+}
+
 #searchBody {
   background-color: $primaryColor;
   @include flexBox(column, center, center);

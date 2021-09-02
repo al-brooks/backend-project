@@ -1,12 +1,20 @@
 body {
   margin: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 body a {
   text-decoration: none;
+}
+
+#userLoginBody {
+  margin: 0px;
+  background: center url("../images/login2.png") no-repeat;
+  background-size: cover;
+}
+
+#userSignUpBody {
+  margin: 0px;
+  background: center url("../images/signup-2.jpeg") no-repeat;
+  background-size: cover;
 }
 
 #searchBody {
@@ -18,67 +26,6 @@ body a {
 }
 #searchBody a {
   text-decoration: none;
-}
-
-header {
-  margin-top: -50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-header #topNav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 10px;
-  width: 100%;
-  background-color: transparent;
-}
-header #topNav #logoSearch {
-  margin-left: 10px;
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-header #topNav #logoSearch #logoImg {
-  margin-left: 5px;
-  background: center url("../images/moviescooplogo.png") no-repeat;
-  background-size: contain;
-  border-radius: 10px;
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
-}
-header #topNav #logoSearch form {
-  width: 100%;
-}
-header #topNav #logoSearch form #search {
-  border: transparent;
-  border-radius: 10px;
-  height: 20px;
-  width: 60%;
-}
-header #topNav #logoSearch form #searchFormBtn {
-  margin-left: 5px;
-  background: center url("../images/search_icon.png") no-repeat;
-  background-size: contain;
-  width: 15px;
-  height: 15px;
-  border: transparent;
-}
-header #topNav #logoSearch form #searchFormBtn:hover {
-  cursor: pointer;
-}
-header #topNav #navBtns {
-  margin-right: 15px;
-}
-header #topNav #guestLogin {
-  margin-right: 15px;
 }
 
 #searchHeader {
@@ -161,34 +108,25 @@ header #topNav #guestLogin {
   justify-content: center;
   align-items: center;
 }
-#searchHeader #landingHeader {
-  margin-top: -30px;
+
+#landingHeader {
+  margin-top: -50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#searchHeader #landingHeader #topNav {
+#landingHeader #topNav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0px;
+  top: 10px;
   width: 100%;
-  background-color: black;
-  color: #ffff;
-  height: 80px;
-  display: flexbox;
-  justify-content: flex-start;
-}
-#searchHeader #landingHeader #topNav button {
-  justify-content: flex-start;
-  font: 24px sans-serif;
   background-color: transparent;
-  border: 0;
 }
-#searchHeader #landingHeader #topNav #logoSearch {
+#landingHeader #topNav #logoSearch {
   margin-left: 10px;
   width: 60%;
   display: flex;
@@ -196,258 +134,47 @@ header #topNav #guestLogin {
   justify-content: flex-start;
   align-items: center;
 }
-#searchHeader #landingHeader #topNav #logoSearch span {
-  height: 100%;
-  display: table;
-  float: left;
+#landingHeader #topNav #logoSearch #logoImg {
+  margin-left: 5px;
+  background: center url("../images/moviescooplogo.png") no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
 }
-#searchHeader #landingHeader #topNav #logoSearch form {
-  width: 80%;
-}
-#searchHeader #landingHeader #topNav #logoSearch form #search {
-  width: 30%;
-  padding: 6px;
-  margin-left: 6px;
-  background: none;
-  color: white;
-  top: 50%;
-  left: 50%;
-}
-#searchHeader #landingHeader #topNav #navBtns {
-  margin-right: 10px;
-  font-size: 36px;
-  color: whitesmoke;
-}
-
-main {
-  padding-top: 30px;
+#landingHeader #topNav #logoSearch form {
   width: 100%;
 }
-main section {
-  padding-top: 30px;
-  height: 100vh;
+#landingHeader #topNav #logoSearch form #search {
+  border: transparent;
+  border-radius: 10px;
+  height: 20px;
+  width: 60%;
 }
-main h2 {
-  margin: 0px;
-}
-main .landingAuth {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main .landingAuth #login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main .landingAuth #signup {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main #loginSection {
-  background-image: url(/images/login2.png);
+#landingHeader #topNav #logoSearch form #searchFormBtn {
+  margin-left: 5px;
+  background: center url("../images/search_icon.png") no-repeat;
   background-size: contain;
-  padding: 0;
-  margin: 0;
-  background-size: cover;
-  font-family: sans-serif;
+  width: 15px;
+  height: 15px;
+  border: transparent;
 }
-main #loginSection h2 {
-  float: right;
-  color: #0c745d;
-  font-size: 40px;
-  border-bottom: 6px solid #4caf50;
-  margin-bottom: 50px;
-  padding: 13px 0;
+#landingHeader #topNav #logoSearch form #searchFormBtn:hover {
+  cursor: pointer;
 }
-main #loginSection #login input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: none;
-  margin: 6px auto;
-  text-align: center;
-  width: 200px;
-  outline: none;
-  border-radius: 8px;
-  transition: 0.25s;
-  font-size: 18px;
-  background-color: #e9f5f5;
+#landingHeader #topNav #navBtns {
+  margin-right: 15px;
 }
-main #loginSection #login button {
-  display: block;
-  margin: 6px auto;
-  text-align: center;
-  padding: 0;
-  width: 100px;
-  outline: none;
-  border-radius: 8px;
-  transition: 0.25s;
-  font-size: 18px;
-  font-weight: 200;
-  background-color: #e9f5f5;
+#landingHeader #topNav #guestLogin {
+  margin-right: 15px;
 }
-main #signupSection {
-  background-color: #c14352;
-  background-image: url(/images/signup-2.jpeg);
-  padding: 0;
-  margin: 0;
-  background-size: cover;
-  font-family: sans-serif;
+
+#userAuthHeader #userAuthNav {
+  width: 100%;
 }
-main #signupSection h2 {
-  float: right;
-  color: #8a1111;
-  font-size: 40px;
-  border-bottom: 6px solid #010701;
-  margin-bottom: 50px;
-  padding: 13px 0;
-}
-main #signupSection #signup input {
-  background: none;
-  display: block;
-  margin: 6px auto;
-  text-align: center;
-  padding: 14px 10px;
-  width: 200px;
-  outline: none;
-  border-radius: 8px;
-  transition: 0.25s;
-  color: #03031d;
-  font-size: 18px;
-  background-color: #fcfcfa;
-}
-main #signupSection #signup button {
-  background: none;
-  display: block;
-  margin: 6px auto;
-  text-align: center;
-  padding: 0;
-  width: 200px;
-  outline: none;
-  border-radius: 6px;
-  transition: 0.25s;
-  color: #071522;
-  font-size: 18px;
-  font-weight: 200;
-  background-color: #e9f5f5;
-}
-main #topAuth {
-  padding-bottom: 30px;
-  background-color: #e2d6c5;
-  background-image: url(/images/index06.jpeg);
-  background-size: contain;
-}
-main #topAuth h2 {
-  color: whitesmoke;
-  font-size: 44px;
-}
-main #topAuth p {
-  color: aliceblue;
-  font-size: 24px;
-  font-weight: 100;
-}
-main #landingInfo {
-  display: none;
-  padding-bottom: 30px;
-  background-color: #e2d6c5;
-  background-image: url(/images/index01.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-main #landingInfo h2 {
-  color: black;
-  font-size: 44px;
-}
-main #landingInfo p {
-  color: #5013f7;
-  font-size: 24px;
-  font-weight: 100;
-}
-main #landingHowTo {
-  display: none;
-  background-image: url(/images/index02.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-main #landingHowTo h2 {
-  color: aliceblue;
-  font-size: 44px;
-}
-main #landingHowTo p {
-  color: aliceblue;
-  font-size: 24px;
-  font-weight: 100;
-}
-main #landingEnd {
-  background-image: url(/images/index4.jpng);
-  background-size: contain;
-  background-position: center;
-}
-main #landingEnd h2 {
-  color: #f9f9fd;
-  font-size: 44px;
-}
-main #landingEnd p {
-  color: aliceblue;
-  font-size: 24px;
-  font-weight: 100;
-}
-main #bottomAuth {
-  background-image: url(/images/index01.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-main #bottomAuth h2 {
-  color: aliceblue;
-  font-size: 44px;
-}
-main #bottomAuth p {
-  color: aliceblue;
-  font-size: 24px;
-  font-weight: 100;
-}
-main #signup {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main #loginSection {
-  background-color: #760a08;
-}
-main #signupSection {
-  background-color: #c14352;
-}
-main #topAuth {
-  padding-bottom: 30px;
-  background-color: #e2d6c5;
-}
-main #landingInfo {
-  display: none;
-}
-main #landingHowTo {
-  display: none;
-}
-main #landingEnd {
-  display: none;
-}
-main #bottomAuth {
-  display: none;
-}
-main .movieReviews {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#userAuthHeader #userAuthNav #navBtns {
+  margin-right: 15px;
 }
 
 #searchMain {
@@ -479,51 +206,125 @@ main .movieReviews {
   margin-bottom: 10px;
 }
 
+#moviesMain .movieReviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#landingMain {
+  padding-top: 30px;
+  width: 100%;
+}
+#landingMain section {
+  padding-top: 30px;
+  height: 100vh;
+}
+#landingMain h2 {
+  margin: 0px;
+}
+#landingMain #topAuth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  background: center/cover url("../images/login2.png") no-repeat;
+}
+#landingMain #topAuth h2 {
+  color: whitesmoke;
+  font-size: 44px;
+}
+#landingMain #topAuth p {
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: 100;
+}
+#landingMain #landingInfo {
+  display: none;
+  padding-bottom: 30px;
+  background-color: #e2d6c5;
+}
+#landingMain #landingInfo h2 {
+  color: black;
+  font-size: 44px;
+}
+#landingMain #landingInfo p {
+  color: #5013f7;
+  font-size: 24px;
+  font-weight: 100;
+}
+#landingMain #landingHowTo {
+  display: none;
+  background: center/cover url("../images/index5.jpeg") no-repeat;
+}
+#landingMain #landingHowTo h2 {
+  color: aliceblue;
+  font-size: 44px;
+}
+#landingMain #landingHowTo p {
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: 100;
+}
+#landingMain #landingEnd {
+  display: none;
+  background-color: #e2d6c5;
+}
+#landingMain #landingEnd h2 {
+  color: #f9f9fd;
+  font-size: 44px;
+}
+#landingMain #landingEnd p {
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: 100;
+}
+#landingMain #bottomAuth {
+  display: none;
+  background: center/cover url("../images/signup.jpeg") no-repeat;
+}
+#landingMain #bottomAuth h2 {
+  color: aliceblue;
+  font-size: 44px;
+}
+#landingMain #bottomAuth p {
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: 100;
+}
+
 @media (min-width: 768px) {
-  main {
+  #landingMain {
     padding-top: 30px;
     width: 100%;
   }
-  main section {
+  #landingMain section {
     height: 500px;
   }
-  main h2 {
+  #landingMain h2 {
     margin: 0px;
   }
-  main #loginSection {
-    background-color: #760a08;
-    height: 100vh;
-  }
-  main #signupSection {
-    background-color: #c14352;
-    height: 100vh;
-  }
-  main #topAuth {
-    background-color: #e2d6c5;
-  }
-  main #landingInfo {
-    background-color: #760a08;
+  #landingMain #landingInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  main #landingHowTo {
-    background-color: #c14352;
+  #landingMain #landingHowTo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  main #landingEnd {
-    background-color: #c47318;
+  #landingMain #landingEnd {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  main #bottomAuth {
-    background-color: #000;
+  #landingMain #bottomAuth {
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -531,57 +332,97 @@ main .movieReviews {
     align-items: center;
   }
 }
-@media (min-width: 768px) {
-  main {
-    padding-top: 30px;
-    width: 100%;
-  }
-  main section {
-    height: 500px;
-  }
-  main h2 {
-    margin: 0px;
-  }
-  main #loginSection {
-    background-color: #760a08;
-    height: 100vh;
-  }
-  main #signupSection {
-    background-color: #c14352;
-    height: 100vh;
-  }
-  main #topAuth {
-    background-color: #e2d6c5;
-  }
-  main #landingInfo {
-    background-color: #760a08;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  main #landingHowTo {
-    background-color: #c14352;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  main #landingEnd {
-    background-color: #c47318;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  main #bottomAuth {
-    background-color: #000;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+#userAuthMain #loginSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+#userAuthMain #loginSection h2 {
+  float: right;
+  color: #0c745d;
+  font-size: 40px;
+  border-bottom: 6px solid #4caf50;
+  margin-bottom: 50px;
+  padding: 13px 0;
+}
+#userAuthMain #loginSection #login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#userAuthMain #loginSection #login input {
+  margin: 6px auto;
+  text-align: center;
+  width: 200px;
+  outline: none;
+  border-radius: 8px;
+  transition: 0.25s;
+  font-size: 18px;
+  background-color: #fff;
+}
+#userAuthMain #loginSection #login button {
+  display: block;
+  margin: 6px auto;
+  text-align: center;
+  padding: 0;
+  width: 100px;
+  outline: none;
+  border-radius: 8px;
+  transition: 0.25s;
+  font-size: 18px;
+  font-weight: 200;
+  background-color: #e9f5f5;
+}
+#userAuthMain #signupSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+#userAuthMain #signupSection h2 {
+  color: #8a1111;
+  font-size: 35px;
+  border-bottom: 3px solid #010701;
+  margin-bottom: 10px;
+  padding: 5px 0px;
+}
+#userAuthMain #signupSection #signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+#userAuthMain #signupSection #signup input {
+  background-color: #fff;
+  margin: 3px auto;
+  padding: 3px 0px 3px 5px;
+  width: 190px;
+  border: none;
+  border-radius: 3px;
+}
+#userAuthMain #signupSection #signup button {
+  text-align: center;
+  width: 200px;
+  line-height: 2em;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  transition: 0.25s;
+  color: #fff;
+  font-weight: 200;
+  background-color: #c14352;
+}
+#userAuthMain #signupSection #signup button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=output.css.map */

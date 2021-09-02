@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="/css/output.css" />
     <title>Login</title>
 </head>
-<body>
-    <header>
-        <nav id=topNav>
+<body id="userLoginBody">
+    <header id="userAuthHeader">
+        <nav id=userAuthNav>
             <button><a href="../">Home</a></button>
             <button id="loginBtn"><a href="/users/login">Log in</a></button>
             <button id="signupBtn"><a href="/users/signup">Sign up</a></button>
         </nav>
     </header>
-    <main>
-        <section id="loginSection" class="landingAuth">
+    <main id="userAuthMain">
+        <section id="loginSection">
             <h2>Login</h2>
             <span>{{message}}</span>
             <form id="login" method="POST" action="/users/login">

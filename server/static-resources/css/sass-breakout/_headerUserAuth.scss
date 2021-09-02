@@ -1,0 +1,15 @@
+@import './mixins';
+#userAuthHeader {
+  // margin-top: -50px;
+  // @include flexBox(row, center, center);
+  #userAuthNav {
+    // @include flexBox(row, space-between, center);
+    // position: fixed;
+    // top: 10px;
+    width: 100%;
+    // background-color: transparent;
+    #navBtns {
+      margin-right: 15px;
+    }
+  }
+}

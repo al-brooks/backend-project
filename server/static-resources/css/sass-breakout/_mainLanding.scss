@@ -1,0 +1,106 @@
+@import './mixins';
+#landingMain {
+  padding-top: 30px;
+  width: 100%;
+  section {
+    padding-top: 30px;
+    height: 100vh;
+  }
+  h2 {
+    margin: 0px;
+  }
+  #topAuth {
+    @include flexBox(column, center, center);
+    padding-bottom: 30px;
+    background: center / cover url('../images/login2.png') no-repeat;
+    h2 {
+      color: whitesmoke;
+      font-size: 44px;
+    }
+    p {
+      color: aliceblue;
+      font-size: 24px;
+      font-weight: 100;
+    }
+  }
+  #landingInfo {
+    display: none;
+    padding-bottom: 30px;
+    background-color: $primaryColor;
+    h2 {
+      color: black;
+      font-size: 44px;
+    }
+    p {
+      color: rgb(80, 19, 247);
+      font-size: 24px;
+      font-weight: 100;
+    }
+  }
+  #landingHowTo {
+    display: none;
+    background: center / cover url('../images/index5.jpeg') no-repeat;
+    h2 {
+      color: aliceblue;
+      font-size: 44px;
+    }
+    p {
+      color: aliceblue;
+      font-size: 24px;
+      font-weight: 100;
+    }
+  }
+  #landingEnd {
+    display: none;
+    background-color: $primaryColor;
+    h2 {
+      color: rgb(249, 249, 253);
+      font-size: 44px;
+    }
+    p {
+      color: aliceblue;
+      font-size: 24px;
+      font-weight: 100;
+    }
+  }
+  #bottomAuth {
+    display: none;
+    background: center / cover url('../images/signup.jpeg') no-repeat;
+    h2 {
+      color: aliceblue;
+      font-size: 44px;
+    }
+    p {
+      color: aliceblue;
+      font-size: 24px;
+      font-weight: 100;
+    }
+  }
+}
+
+// tablet layout
+@media (min-width: 768px) {
+  #landingMain {
+    padding-top: 30px;
+    width: 100%;
+    section {
+      height: 500px;
+    }
+    h2 {
+      margin: 0px;
+    }
+    #landingInfo {
+      @include flexBox(column, center, center);
+    }
+    #landingHowTo {
+      @include flexBox(column, center, center);
+    }
+    #landingEnd {
+      @include flexBox(column, center, center);
+    }
+    #bottomAuth {
+      padding-bottom: 30px;
+      @include flexBox(column, center, center);
+    }
+  }
+}
