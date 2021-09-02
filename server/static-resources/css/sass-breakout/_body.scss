@@ -9,6 +9,10 @@ body {
   @include flexBox(column, center, center);
 }
 
+#moviescoopbtn {
+  background-color: aqua;
+}
+
 // tablet layout
 @media (min-width: 768px) {
 }

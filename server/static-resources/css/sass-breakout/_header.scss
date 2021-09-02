@@ -2,8 +2,16 @@
 @import './mixins';
 //mobile layout first
 header {
-    margin-top: -30px;
+    margin-top: 50px;
     @include flexBox(row, center, center);
+    
+        #logoimg {
+            height: 120px;
+            width:120px;
+            background: center url(../images/moviescooplogo.png);
+            background-size: contain;
+
+        }
     #topNav {
         @include flexBox(row, space-between, center);
         position: fixed;
@@ -44,6 +52,7 @@ header {
             font-size: 44px;
         }
     }
+    
 }
 
 // tablet layout
