@@ -38,6 +38,7 @@
     border: 2px solid $thirdColor;
     border-radius: 10px;
     padding: 10px;
+    margin: 0px 20px;
   }
   h2 {
     margin-bottom: 0px;
@@ -122,6 +123,42 @@
         margin-bottom: 5px;
       }
     }
+  }
+}
+
+#homeMain {
+  padding-top: 30px;
+  width: 100%;
+  section {
+    padding-top: 30px;
+    height: 500px;
+  }
+  h2 {
+    width: 80%;
+    text-align: center;
+    margin: 0px;
+  }
+  p {
+    text-align: center;
+    width: 50%;
+  }
+  #homeInfo {
+    @include flexBox(column, center, center);
+    padding-bottom: 30px;
+    background-color: $primaryColor;
+    h2 {
+      color: $primaryText;
+      font-size: 44px;
+    }
+    p {
+      color: $primaryText;
+      font-size: 24px;
+      font-weight: 100;
+    }
+  }
+  #homePoster {
+    @include flexBox(column, center, center);
+    background: center / cover url('../images/index5.jpeg') no-repeat;
   }
 }
 
