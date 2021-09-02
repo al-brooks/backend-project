@@ -34,6 +34,10 @@
   h2 {
     margin: 0px;
   }
+  p {
+    text-align: center;
+    width: 50%;
+  }
   #topAuth {
     @include flexBox(column, center, center);
     padding-bottom: 30px;

@@ -350,6 +350,10 @@ body a {
 #landingMain h2 {
   margin: 0px;
 }
+#landingMain p {
+  text-align: center;
+  width: 50%;
+}
 #landingMain #topAuth {
   display: flex;
   flex-direction: column;
