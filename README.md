@@ -5,7 +5,7 @@
 - App link: https://movie-scoop-01284.herokuapp.com/
 - To view user features click "Login as Guest" 
 
-## App Description:
+## App Description
 
 A web application for movie lovers. Users can create an account, search for their favorite movies, see reviews mafe for that movie by other users, and then leave their own. Their User Account page will list out all the reviews they've posted, along with basic info.
 
@@ -17,7 +17,7 @@ We created this application because we wanted to create a movie review app that 
 
 The App landing page provides the option to login as an User/Guest or to sign up on the App. Movie Scoop give you an abundance of movies to see the details, ratings, and reviews.
 
-## Site Screenshots:
+## Site Screenshots
 
 ### Landing Page
 ![landing-page](https://user-images.githubusercontent.com/47277927/132013643-42a901ca-5734-4d7b-9bd8-f089cbf71245.png)
@@ -41,7 +41,7 @@ The App landing page provides the option to login as an User/Guest or to sign up
 ![movie-details-page](https://user-images.githubusercontent.com/47277927/132013761-e9b1c6e0-f0c2-425b-8158-fde86d2d5073.png)
 
 
-## Some Movies That Have Been Reviewed:
+## Some Movies That Have Been Reviewed
 
 - Moonlight
 - Creed
@@ -50,7 +50,7 @@ The App landing page provides the option to login as an User/Guest or to sign up
 - The Lord of the Rings: The Fellowship of the Ring
 - Tangled
 
-## Technologies Used:
+## Technologies Used
 
 #### Front-End Technologies
 
@@ -68,23 +68,23 @@ The App landing page provides the option to login as an User/Guest or to sign up
   - mustache express
   - pg-promise
 
-#### Database:
+#### Database
 
 - Elephant SQL
 - PostgreSQL
 
-#### API:
+#### API
 
 - OMDb API: https://www.omdbapi.com/
 
-#### Images Used For App:
+#### Images Used For App
 
 - https://unsplash.com/photos/MAYsdoYpGuk
 - https://unsplash.com/photos/ScQXxiIZ0Qo
 - https://unsplash.com/photos/EI7v-hQ4vY0
 - https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-movies-1614634680.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*
 
-## Software Engineers:
+## Software Engineers
 
 - Alexander Brooks
 - Jennifer DeYoung
