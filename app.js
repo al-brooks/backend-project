@@ -3,6 +3,9 @@ require('dotenv').config();
 // express
 global.express = require('express');
 const app = express();
+// cors
+const cors = require('cors');
+app.use(cors());
 // fetch API
 global.fetch = require('node-fetch');
 //session
