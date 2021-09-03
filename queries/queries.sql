@@ -54,3 +54,10 @@ ADD COLUMN movie_title VARCHAR(100)
 UPDATE reviews
 SET movie_title = 'Aliens'
 WHERE movie_id = 'tt0090605'
+
+-- added column to indicate whether a user is a test user or not
+ALTER TABLE users
+ADD COLUMN test_user BOOLEAN DEFAULT FALSE
+
+-- I updated the column values to true since all users at this point are test users
+UPDATE users SET test_user = true
