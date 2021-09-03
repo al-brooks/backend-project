@@ -1,32 +1,58 @@
 # DigitalCrafts Week Nine Backend Project: Movie Review App
 
-## App:MOVIE SCOOP
+## App Name: MOVIE SCOOP
 
-name
-link
+app link: https://movie-scoop-01284.herokuapp.com/
 
 ## App Description:
-##Description UI Project building a web application to search movie reviews. Users are able to create a login and be able to leave a review on a movie they have seen.
 
-##Motivation 
- -We created this application because we wanted to create a movie review app that was very refreshing and more appealing to the eye. Our movie review app gives   guests and users the opportunity to share their review on movies they have seen.
+A web application for movie lovers. Users can create an account, search for their favorite movies, see reviews mafe for that movie by other users, and then leave their own. Their User Account page will list out all the reviews they've posted, along with basic info.
 
-##Features -Home page is featured with a very classic background with an option to login as an User/Guest or to sign up on the App. Movie Scoop give you an abundance of movies to see the details, ratings, and reviews.
+## Motivation
 
-##Challenges and Solutions
+We created this application because we wanted to create a movie review app that was user-driven and had a pleasant UI. Our movie review app gives users the opportunity to share their review on movies they have seen, as well as non-users the ability to search our site for their favorite movies.
 
-Challenges: -Understanding proper Git practices -Getting and displaying information from our API. -Working through issues with our different machines
+## Features
 
-Solution: We asked a lot of questions, watched many tutorials, and learned through trial and error.
+Home page is featured with a very classic background with an option to login as an User/Guest or to sign up on the App. Movie Scoop give you an abundance of movies to see the details, ratings, and reviews.
+
+## Some Movies That Have Been Reviewed:
+
+- Moonlight
+- Creed
+- Black Panther
+- Star Wars: Episode III - Revenge of the Sith
+- The Lord of the Rings: The Fellowship of the Ring
+- Tangled
+
 ## Technologies Used:
+
+#### Front-End Technologies
 
 - HTML
 - CSS
-- SCSS
+- Sass
 - JavaScript
+
+#### Back-End Technologies
+
 - Node.js
+  - bcryptjs
+  - express
+  - express session
+  - mustache express
+  - pg-promise
+
+#### Database:
+
 - Elephant SQL
 - PostgreSQL
+
+#### API:
+
+- OMDb API: https://www.omdbapi.com/
+
+#### Images Used From Unsplash:
 
 ## Software Engineers:
 
