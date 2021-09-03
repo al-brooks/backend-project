@@ -76,11 +76,12 @@ The App landing page provides the option to login as an User/Guest or to sign up
 
 - OMDb API: https://www.omdbapi.com/
 
-#### Images Used From Unsplash:
+#### Images Used For App:
 
 - https://unsplash.com/photos/MAYsdoYpGuk
 - https://unsplash.com/photos/ScQXxiIZ0Qo
 - https://unsplash.com/photos/EI7v-hQ4vY0
+- https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-movies-1614634680.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*
 
 ## Software Engineers:
 
