@@ -28,10 +28,10 @@ async function fetchMovieData(url) {
 searchBtn.addEventListener('click', () => {
   const searchTerm = search.value;
 
-  // local server url
+  // local server url - uncomment when testing locally
   // const serverUrl = `http://localhost:3000/search/movies/${searchTerm}`;
 
-  // heroku url
+  // heroku url - uncomment when deploying
   const serverUrl = `https://movie-scoop-01284.herokuapp.com/search/movies/${searchTerm}`;
 
   fetchMovieData(serverUrl);
