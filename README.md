@@ -54,6 +54,10 @@ Home page is featured with a very classic background with an option to login as 
 
 #### Images Used From Unsplash:
 
+- https://unsplash.com/photos/MAYsdoYpGuk
+- https://unsplash.com/photos/ScQXxiIZ0Qo
+- https://unsplash.com/photos/EI7v-hQ4vY0
+
 ## Software Engineers:
 
 - Alexander Brooks
