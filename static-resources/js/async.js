@@ -27,7 +27,12 @@ async function fetchMovieData(url) {
 
 searchBtn.addEventListener('click', () => {
   const searchTerm = search.value;
-  const serverUrl = `http://localhost:3000/search/movies/${searchTerm}`;
+
+  // local server url
+  // const serverUrl = `http://localhost:3000/search/movies/${searchTerm}`;
+
+  // heroku url
+  const serverUrl = `https://movie-scoop-01284.herokuapp.com/search/movies/${searchTerm}`;
 
   fetchMovieData(serverUrl);
 });
