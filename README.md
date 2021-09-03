@@ -2,7 +2,8 @@
 
 ## App Name: MOVIE SCOOP
 
-app link: https://movie-scoop-01284.herokuapp.com/
+App link: https://movie-scoop-01284.herokuapp.com/
+To view user features click "Login as Guest" 
 
 ## App Description:
 
